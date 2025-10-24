@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 
 <html>
-    <body>
-        <header>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Profiles</a>
-                <a href="#">About</a>
-            </nav>
-        </header>
 
-        <section class="sectionSplitter">
-            <h2>Reminders</h2>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Profiles</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <form>
+
+        <section class="infoSection">
+            <h2>Information</h2>
+
+            <label for="title">Title Your Activity</label>
+            <input type="text" id="email" name="email" placeholder="Title" required>
+
+            <label for="event-date">When Will This Occur?</label>
+            <input type="date" id="event-date" name="event-date">
+
+            <label for="myDropdown">What category does this event fall under?</label>
+            <select id="myDropdown" name="myDropdown">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+
+            <label for="title">Title Your Activity</label>
+            <input type="text" id="email" name="email" placeholder="Title" required>
+
+            <label for="description">Describe what happened:</label>
+            <textarea id="description" name="description" rows="6" placeholder="Your Message Here..."
+                required></textarea>
+
         </section>
 
-        <form>
-            <section class="infoSection">
-                <h2>Information</h2>
+        <section class="reminderSection">
+            <h2>Reminders</h2>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+        </section>
 
-            </section>
-            <section class="reminderSection">
-                <h2>Reminders</h2>
-            </section>
-            <button type="submit">Submit</button>
-        </form>
-    </body>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
 </html>
