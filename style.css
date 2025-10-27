@@ -52,7 +52,7 @@ nav a:hover {
     & > h1 {
         font-size: 50px;
         color: var(--common-white);
-        -webkit-text-stroke: ;
+        -webkit-text-stroke: 1px;
     }
 
     & > p {
