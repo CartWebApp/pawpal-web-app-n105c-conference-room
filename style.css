@@ -1,5 +1,9 @@
 /* Everything! */
 
+:root {
+    --common-white: rgb(242, 238, 228);
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
@@ -25,7 +29,7 @@ nav a {
     font-size: 20px;
 
     text-decoration: none;
-    color: rgb(242, 238, 228);
+    color: var(--common-white);
 }
 
 nav a:hover {
@@ -33,3 +37,24 @@ nav a:hover {
 }
 
 /* Home Page */
+
+.mainPageHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    aspect-ratio: 16/7;
+    background: url("images/HeroImage.png");
+    background-size: cover;
+    background-position: center;
+
+    & > h1 {
+        font-size: 50px;
+        color: var(--common-white);
+        -webkit-text-stroke: ;
+    }
+
+    & > p {
+    }
+}
