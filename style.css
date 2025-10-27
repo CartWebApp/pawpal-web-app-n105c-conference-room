@@ -1,9 +1,9 @@
 /* Everything! */
 
 body {
-    font-family: 'Open Sans', sans-serif; 
-   margin: 0;
-   padding: 0;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -23,7 +23,7 @@ nav a {
     padding: 1rem;
     margin-left: 2rem;
     font-size: 20px;
-    
+
     text-decoration: none;
     color: rgb(242, 238, 228);
 }
