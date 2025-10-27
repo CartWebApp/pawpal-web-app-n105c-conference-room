@@ -1,0 +1,35 @@
+/* Everything! */
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+   margin: 0;
+   padding: 0;
+}
+
+header {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(128, 163, 86);
+    padding: 0.5rem 2rem;
+}
+
+header img {
+    height: 70px;
+}
+
+nav a {
+    padding: 1rem;
+    margin-left: 2rem;
+    font-size: 20px;
+    
+    text-decoration: none;
+    color: rgb(242, 238, 228);
+}
+
+nav a:hover {
+    background-color: rgb(73 80 95);
+}
+
+/* Home Page */
