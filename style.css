@@ -317,3 +317,13 @@ nav a:hover {
         }
     }
 }
+
+/* Sign in Page */
+.signInPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2% 3.5%;
+}
