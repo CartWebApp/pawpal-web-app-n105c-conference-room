@@ -319,11 +319,17 @@ nav a:hover {
 }
 
 /* Sign in Page */
-.signInPage {
+.signInPage{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 2% 3.5%;
+
+    & > div > section > form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 300px;
+    }
 }
