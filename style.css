@@ -433,23 +433,117 @@ nav a:hover {
             font-size: 17.5px;
         }
 
-        & > button:first-of-type {
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 4%;
-            font-size: 16px;
-
-            &::after {
-                /* Google Image would be here */
-                content: '';
-            }
-        }
-
-        & > button:last-of-type {
+        & > button {
             border: 0px;
             border-radius: 20px;
             padding: 4%;
             font-size: 17.5px
+        }
+    }
+}
+
+/* About Us Page */
+
+.aboutUsPage > *:not(header) {
+    border-bottom: #42522D 8px solid;
+}
+
+.aboutUsHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    aspect-ratio: 16/4;
+    background: url("images/aboutUsHero.jpg");
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+    padding: 7.5%;
+
+    & > h1 {
+        font-size: 65px;
+        font-weight: bold;
+        color: var(--common-white);
+        -webkit-text-stroke: 2px var(--border-brown);
+    }
+}
+
+.ourMission {
+    background-color: #9AB479;
+    display: grid;
+    grid-template: 1fr/1fr 1fr;
+    column-gap: 15px;
+    padding: 5%;
+
+    & > img {
+        order: 1;
+        width: 90%;
+    }
+
+    & > div {
+        color: var(--common-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > h2 {
+            font-weight: 100;
+            font-size: 40px;
+        }
+    }
+}
+
+.ourVision {
+    background-color: #84A55B;
+    display: grid;
+    grid-template: 1fr/1fr 1fr;
+    column-gap: 15px;
+    padding: 5%;
+
+    & > img {
+        width: 90%;
+    }
+
+    & > div {
+        color: var(--common-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > h2 {
+            font-weight: 100;
+            font-size: 40px;
+        }
+    }
+}
+
+.meetOurTeam {
+    text-align: center;
+
+    & > h2 {
+        font-size: 40px;
+        font-weight: 200;
+    }
+
+    & > p {
+        font-size: 20px;
+        margin: 0% 10%;
+    }
+
+    & > .profileGrid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5% 5%;
+
+        & > .profile {
+            padding: 3%;
+            & > p {
+                font-size: 30px;
+            }
         }
     }
 }
