@@ -52,7 +52,7 @@ nav a:hover {
     flex-direction: column;
 
     aspect-ratio: 16/7;
-    background: url("images/HeroImage.png");
+    background: url("images/HeroImage.webp");
     background-size: cover;
     background-position: center;
 
@@ -500,7 +500,8 @@ body.petProfilesPage {
         &::before {
             content: '';
             background: url(Images/brunoProfile.jpg) center / cover no-repeat;
-            
+            margin-top: 15px;
+
             border-radius: 50%;
             aspect-ratio: 1/1;
             width: 80px;
@@ -560,6 +561,84 @@ body.petProfilesPage {
             align-self: center;
             justify-self: center;
         }
+    }
+}
+
+/* Single Pet Profile Page */
+
+body.singlePetProfilePage {
+    background-color: #80A356;
+}
+
+.profileTag {
+    display: flex;
+
+    & > img {
+        border-radius: 50%;
+        border: 5px solid var(--border-brown);
+
+        width: 100px;
+        height: 100px;
+    }
+
+    & > h2 {
+        font-size: 50px;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+
+        &::before {
+            content: '';
+
+            background: url(images/brunoProfile.jpg) center / contain no-repeat;;
+            aspect-ratio: 1/1;
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    & > p:first-of-type {
+        font-size: 20px;
+        color: gray;
+        margin-top: 0%;
+        margin-bottom: 1rem;
+    }
+
+    & > p:last-of-type {
+        font-size: 20px;
+        color: gray;
+        margin-top: 0%;
+    }
+}
+
+.dataSection {
+    display: grid;
+    grid-template: auto auto / 1fr 1fr;
+
+    & > .recentActivity, & > .upcomingEvents {
+        background-color: var(--common-white);
+        border: 2px solid var(--border-brown);
+        border-radius: 20px;
+        padding: 2%;
+        margin: 5%;
+
+        & > h3 {
+            text-align: center;
+        }
+
+        & > .eventObject {
+            margin: 5%;
+            border: 2px solid var(--border-brown);
+            border-radius: 20px;
+        }
+    }
+
+    & > .recentActivity {
+        grid-row: 2;
+    }
+
+    & > .graphs {
+        grid-column: 2;
+        grid-row:  1 / span 2;
     }
 }
 
