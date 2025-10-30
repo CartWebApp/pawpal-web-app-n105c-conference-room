@@ -319,17 +319,137 @@ nav a:hover {
 }
 
 /* Sign in Page */
-.signInPage{
+
+.signInPage > div {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 
-    & > div > section > form {
+    & > h1 {
+        font-weight: 400;
+        font-size: 40px;
+        margin-bottom: 3rem;
+    }
+
+    & > section > a {
+        color: black;
+        font-size: 20px;
+
+        &::before {
+            content: 'or ';
+            text-decoration: none;
+        }
+    }
+
+    & > section > form {
+        border-radius: 20px;
+        background-color: #84A55B;
+        justify-self: center; /* This looks redundant but for some reason it fixes the padding causing it to be offset*/
+        padding: 7.5%;
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        
         width: 300px;
+        margin-bottom: 20px;
+
+        & > input {
+            padding: 3%;
+            border: 0px;
+            border-radius: 15px;
+            color: var(--common-white);
+            margin-bottom: 20px;
+            font-size: 17.5px;
+        }
+
+        & > button:first-of-type {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 4%;
+            font-size: 16px;
+
+            &::after {
+                /* Google Image would be here */
+                content: '';
+            }
+        }
+
+        & > button:last-of-type {
+            border: 0px;
+            border-radius: 20px;
+            padding: 4%;
+            font-size: 17.5px
+        }
+    }
+}
+
+/* Create an Account Page */
+
+.accountCreatePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    & > h1 {
+        font-weight: 400;
+        font-size: 40px;
+        margin-bottom: 3rem;
+    }
+
+    & > section > a {
+        color: black;
+        font-size: 20px;
+
+        &::before {
+            content: 'Return to ';
+            text-decoration: none;
+        }
+    }
+
+    & > section > form {
+        border-radius: 20px;
+        background-color: #84A55B;
+        justify-self: center; /* This looks redundant but for some reason it fixes the padding causing it to be offset*/
+        padding: 7.5%;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        width: 300px;
+        margin-bottom: 20px;
+
+        & > input {
+            padding: 3%;
+            border: 0px;
+            border-radius: 15px;
+            color: var(--common-white);
+            margin-bottom: 20px;
+            font-size: 17.5px;
+        }
+
+        & > button:first-of-type {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 4%;
+            font-size: 16px;
+
+            &::after {
+                /* Google Image would be here */
+                content: '';
+            }
+        }
+
+        & > button:last-of-type {
+            border: 0px;
+            border-radius: 20px;
+            padding: 4%;
+            font-size: 17.5px
+        }
     }
 }

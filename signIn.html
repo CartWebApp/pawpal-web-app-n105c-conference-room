@@ -1,52 +1,38 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Sign in</title>
-        <link rel="stylesheet" media="screen" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
 
-    <body class="signInPage">
-      <header>
-            <img src="Images/pawpal-logo-compressed 1.png" />
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Profiles</a>
-                <a href="#">About</a>
-            </nav>
-        </header>
+<head>
+    <title>Sign in</title>
+    <link rel="stylesheet" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
 
-        <div class="mainContent">
-            <h1>PawPal</h1>
+<body class="signInPage">
+    <header>
+        <img src="Images/pawpal-logo-compressed 1.png" />
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Profiles</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <div class="mainContent">
+        <h1>PawPal</h1>
 
         <section class="containerBox">
             <form class="signInForm">
                 <button>Continue with Google</button>
                 <p>or</p>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="email"
-                    required
-                />
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="password"
-                    required
-                />
+                <input type="email" id="email" name="email" placeholder="email" required />
+                <input type="password" id="password" name="password" placeholder="password" required />
                 <button type="submit">Sign In</button>
             </form>
 
-            <!--Use a before psuedo-element in css to put the "or"-->
             <a href="#">Create an Account</a>
         </section>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
