@@ -442,6 +442,35 @@ nav a:hover {
     }
 }
 
+/* Select Profile Page */
+.cartoonHero {
+    background: url(Images/ourMissionPicture.png) lightgray 50% / cover no-repeat;
+    aspect-ratio: 16/5;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    & > h1 {
+        font-size: 50px;
+        font-weight: 400;
+    }
+}
+
+.cardGrid {
+    display: grid;
+    grid-template: 300px / repeat(5,1fr);
+    gap: 15px;
+    grid-auto-rows: auto;
+
+    & > .brunoCard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        background-color: var(--common-white);
+    }
+}
+
 /* About Us Page */
 
 .aboutUsPage > *:not(header) {
