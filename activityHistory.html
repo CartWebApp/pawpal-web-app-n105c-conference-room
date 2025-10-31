@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Activity History</title>
+        <script type="module" src="/main.js"></script>
         <link rel="stylesheet" media="screen" href="style-copy.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
@@ -19,13 +20,58 @@
             </nav>
         </header>
         <article class="main-content">
-            <a class="back-button">Go Back</a>
+            <button class="back-button">Go Back</button>
 
             <h1>Activity History</h1>
 
             <a class="filter"
                 >Filters<img src="Images\filter-icon.svg" alt=""
             /></a>
+            <div class="filter-overlay">
+                <div class="overlay-content">
+                    <span class="close-overlay">&times;</span>
+                    <h2>Filter & Sort Options</h2>
+
+                    <form id="filterForm">
+                        <label>
+                            <input
+                                type="radio"
+                                name="filterOption"
+                                value="a-z"
+                            />
+                            A-Z </label
+                        ><br />
+                        <label>
+                            <input
+                                type="radio"
+                                name="filterOption"
+                                value="z-a"
+                            />
+                            Z-A </label
+                        ><br />
+                        <label>
+                            <input
+                                type="radio"
+                                name="filterOption"
+                                value="recent"
+                            />
+                            Recent </label
+                        ><br />
+                        <label>
+                            <input
+                                type="radio"
+                                name="filterOption"
+                                value="oldest"
+                            />
+                            Oldest </label
+                        ><br />
+
+                        <button type="button">
+                            Apply Filters
+                        </button>
+                    </form>
+                </div>
+            </div>
 
             <section>
                 <ul>
