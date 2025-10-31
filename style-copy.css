@@ -17,7 +17,7 @@ body {
     background-color: var(--common-white);
 }
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -31,7 +31,7 @@ header {
     align-items: center;
     background-color: rgb(128, 163, 86);
     padding: 0.5rem 2rem;
-    width: 90rem;
+    width: 123.43rem;
 }
 
 header img {
@@ -52,16 +52,16 @@ nav a:hover {
 }
 .main-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     align-content: center;
     flex-direction: column;
     text-align: center;
     padding: 2% 3.5%;
-    margin-left: 35em;
 }
 .back-button {
     padding: 0.3% 0.7%;
+    margin-bottom: 1em;
     font-size: 1rem;
     background-color: var(--common-green);
     border: 2px solid var(--border-brown);
@@ -73,7 +73,8 @@ nav a:hover {
     padding: 0.3% 0.7%;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 2em;
+    margin-top: 1em;
     font-size: 1rem;
     background-color: var(--common-white);
     border: 2px solid var(--border-brown);
@@ -93,6 +94,8 @@ li {
     justify-content: space-between;
     align-items: center;
     color: var(--border-brown);
+    margin-top: 5em;
+    margin-bottom: 1em;
     & > .event-line {
         display: flex;
         flex-direction: row;
@@ -100,7 +103,13 @@ li {
         border: 3px solid var(--border-brown);
         border-radius: 20px;
         padding: 1rem;
-        padding-right: 40em;
+        padding-right: 16em;
+        & > img {
+            height: 70px;
+            width: 70px;
+            border-radius: 15px;
+            margin-right: 1rem;
+        }
         & > .event-details {
             font-size: large;
             font-weight: 400;
@@ -114,9 +123,11 @@ li {
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-left: 0;
+        padding-right: 9em;
         & > img {
-            height: 50px;
-            width: 3px;
+            height: 70px;
+            width: 2px;
             margin-right: 1rem;
         }
         & > .event-description {
@@ -128,6 +139,28 @@ li {
     & > p {
         font-size: medium;
     }
+}
+.navigation-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    margin-top: 3rem;
+    margin-left: 10em;
+    & > a{
+        
+        & > img{
+            height: 40px;
+        }
+    }
+}
+
+.Contact {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    height: 40px;
 }
 /* mobile styles */
 @media screen and (max-width: 680px) {
