@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Activity History</title>
-        <link rel="stylesheet" media="screen" href="style.css" />
+        <link rel="stylesheet" media="screen" href="style-copy.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
             rel="stylesheet"
@@ -18,69 +18,99 @@
                 <a href="about.html">About</a>
             </nav>
         </header>
+        <article class="main-content">
+            <a class="back-button">Go Back</a>
 
-        <a href="">Go Back</a>
+            <h1>Activity History</h1>
 
-        <h1>Activity History</h1>
+            <a class="filter"
+                >Filters<img src="Images\filter-icon.svg" alt=""
+            /></a>
 
-        <button type="button">Filters</button>
-
-        <section>
-            <ul>
-                <li>
-                    <img
-                        src="Images\Feeding-icon.png"
-                        alt="Plate with fork and knife"
-                    />
-                    <h2>Feeding</h2>
-                    <p>On October 14th, 9:00 PM</p>
-                    <section>
-                        <h2>Description</h2>
-                        <p>No description provided</p>
-                    </section>
-                </li>
-                <li>
-                    <img
-                        src="Images\medication-icon.png"
-                        alt="Red and Yellow pill"
-                    />
-                    <h2>Medication</h2>
-                    <p>On October 14th, 3:00 PM</p>
-                    <section>
-                        <h2>Description</h2>
-                        <p>Fed 1 pill</p>
-                    </section>
-                </li>
-                <li>
-                    <img src="Images\walk-icon.png" alt="dog" />
-                    <h2>2 Mile Run</h2>
-                    <p>On October 12th, 12:00 AM</p>
-                    <section>
-                        <h2>Description</h2>
-                        <p>Weekly run</p>
-                    </section>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <a href=""
-                ><img
-                    src="Images\full-backwards-button.svg"
-                    alt="full backwards button"
-            /></a>
-            <a href=""
-                ><img src="Images\back-1-button.svg" alt="back button"
-            /></a>
-            <h2>Page 1 of 1</h2>
-            <a href=""
-                ><img src="Images\forward-1-button.svg" alt="forward button"
-            /></a>
-            <a href=""
-                ><img
-                    src="Images\full-forwards-button.svg"
-                    alt="full forwards button"
-            /></a>
-        </section>
-        <img src="Images\open-contact-us.png" alt="Contact Us" />
+            <section>
+                <ul>
+                    <li>
+                        <span class="event-line">
+                            <img
+                                src="Images\Feeding-icon.png"
+                                alt="Plate with fork and knife"
+                            />
+                            <section class="event-details">
+                                <h2>Feeding</h2>
+                                <p>On October 14th, 9:00 PM</p>
+                            </section>
+                        </span>
+                        <span class="desc-line">
+                            <img src="Images\desc-line.png" alt="" />
+                            <section class="event-description">
+                                <h2>Description</h2>
+                                <p>No description provided</p>
+                            </section>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="event-line">
+                            <img
+                                src="Images\medication-icon.png"
+                                alt="Red and Yellow pill"
+                            />
+                            <section class="event-details">
+                                <h2>Medication</h2>
+                                <p>On October 14th, 3:00 PM</p>
+                            </section>
+                        </span>
+                        <span class="desc-line">
+                            <img src="Images\desc-line.png" alt="" />
+                            <section class="event-description">
+                                <h2>Description</h2>
+                                <p>Fed 1 pill</p>
+                            </section>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="event-line">
+                            <img src="Images\walk-icon.png" alt="dog" />
+                            <section class="event-details">
+                                <h2>2 Mile Run</h2>
+                                <p>On October 12th, 12:00 AM</p>
+                            </section>
+                        </span>
+                        <span class="desc-line">
+                            <img src="Images\desc-line.png" alt="" />
+                            <section>
+                                <h2>Description</h2>
+                                <p>Weekly run</p>
+                            </section>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+            <section class="navigation-buttons">
+                <a href=""
+                    ><img
+                        src="Images\full-backwards-button.svg"
+                        alt="full backwards button"
+                /></a>
+                <a href=""
+                    ><img src="Images\back-1-button.svg" alt="back button"
+                /></a>
+                <h2>Page 1 of 1</h2>
+                <a href=""
+                    ><img
+                        src="Images\forward-1-button.svg"
+                        alt="forward button"
+                /></a>
+                <a href=""
+                    ><img
+                        src="Images\full-forwards-button.svg"
+                        alt="full forwards button"
+                /></a>
+            </section>
+            <img
+                class="Contact"
+                src="Images\open-contact-us.png"
+                alt="Contact Us"
+            />
+        </article>
     </body>
 </html>

@@ -17,6 +17,7 @@ body {
     background-color: var(--common-white);
 }
 h1 {
+    align-self: flex-start;
     font-size: 3em;
     font-style: normal;
     font-weight: 400;
@@ -31,7 +32,7 @@ header {
     align-items: center;
     background-color: rgb(128, 163, 86);
     padding: 0.5rem 2rem;
-    width: 123.43rem;
+    width: 97%;
 }
 
 header img {
@@ -50,6 +51,7 @@ nav a {
 nav a:hover {
     background-color: rgb(73 80 95);
 }
+/* specific stuff */
 .main-content {
     display: flex;
     align-items: center;
@@ -58,8 +60,11 @@ nav a:hover {
     flex-direction: column;
     text-align: center;
     padding: 2% 3.5%;
+    width: fit-content;
+    margin: 0 auto;
 }
 .back-button {
+    align-self: flex-start;
     padding: 0.3% 0.7%;
     margin-bottom: 1em;
     font-size: 1rem;
@@ -72,8 +77,8 @@ nav a:hover {
 .filter {
     padding: 0.3% 0.7%;
     display: flex;
+    align-self: flex-start;
     align-items: center;
-    margin-bottom: 2em;
     margin-top: 1em;
     font-size: 1rem;
     background-color: var(--common-white);
@@ -103,7 +108,7 @@ li {
         border: 3px solid var(--border-brown);
         border-radius: 20px;
         padding: 1rem;
-        padding-right: 16em;
+        padding-right: 30em;
         & > img {
             height: 70px;
             width: 70px;
@@ -124,7 +129,7 @@ li {
         flex-direction: row;
         align-items: center;
         margin-left: 0;
-        padding-right: 9em;
+        padding-right: 12em;
         & > img {
             height: 70px;
             width: 2px;
@@ -145,14 +150,16 @@ li {
     gap: 5px;
     justify-content: center;
     align-items: center;
-    font-size: 1em;
-    margin-top: 3rem;
-    margin-left: 10em;
+    margin-top: 2rem;
     & > a{
-        
         & > img{
-            height: 40px;
+            height: 50px;
         }
+    }
+    & > h2{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -164,13 +171,9 @@ li {
 }
 /* mobile styles */
 @media screen and (max-width: 680px) {
-    .main-content {
-        background-color: yellow;
-    }
     header {
-        align-items: center;
-        height: auto;
-        width: 91%;
+        width: 94.4vw;
+        justify-items:center;
     }
 
     nav a {
@@ -178,12 +181,38 @@ li {
     }
 
     .main-content {
+        width: 98vw;
         margin-left: 0;
         padding: 5%;
+        align-items: center;
     }
 
     .back-button {
         padding: 0.3% 0.7%;
         font-size: 1.5rem;
+    }
+    .filter {
+        font-size: 1.5rem;
+    }
+    li{
+        & > .event-line {
+            align-self: center;
+            padding-right: 15em;
+            font-size: larger;
+            & > img {
+                height: 50px;
+                width: 50px;
+            }
+            & > .event-details {
+                font-size: medium;
+            }
+        }
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    h1 {
+        margin: 0.5rem 0;
+        font-size: 3.5rem;
     }
 }
