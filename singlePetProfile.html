@@ -1,12 +1,14 @@
+
+
 <!DOCTYPE html>
 
 <html>
     <head>
         <link rel="stylesheet" media="screen" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="mainCopy.js"></script>
     </head>
 
     <body>
@@ -24,7 +26,6 @@
 
             <section class="entireProfile">
                 <section class="profileTag">
-                    <img src="images/brunoProfile.jpg" />
                     <div class="text">
                         <h2>Bruno</h2>
                         <p>Golden Retriever</p>
@@ -45,8 +46,10 @@
                                 <p>Yearly check up at vet office</p>
                             </div>
                         </div>
-                        <a href="upcomingHistory.html">See all reminders</a>
-                        <a href="newActivity.html">+</a>
+                        <div class="links">
+                            <a href="upcomingHistory.html">See all reminders</a>
+                            <a href="newActivity.html">+</a>
+                        </div>
                     </section>
                 
                     <section class="recentActivity">
@@ -86,6 +89,7 @@
                     <aside class="graphs">
                         <section class="graphObject">
                             <h3>Weight (lbs)</h3>
+                            <canvas id="myChart"></canvas>
                             <!--Come back to these; these will require Javascript-->
                         </section>
                 
