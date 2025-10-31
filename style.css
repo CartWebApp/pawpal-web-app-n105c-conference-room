@@ -203,7 +203,7 @@ nav a:hover {
 }
 
 .ourMotive {
-     display: grid;
+    display: grid;
     grid-template: auto / 1fr 1fr;
     background-color: var(--common-green);
 
@@ -613,32 +613,70 @@ body.singlePetProfilePage {
 .dataSection {
     display: grid;
     grid-template: auto auto / 1fr 1fr;
+    justify-items: center;
 
-    & > .recentActivity, & > .upcomingEvents {
+    &>.recentActivity, &>.upcomingEvents {
         background-color: var(--common-white);
         border: 2px solid var(--border-brown);
         border-radius: 20px;
         padding: 2%;
         margin: 5%;
+        width: 400px;
 
-        & > h3 {
+        height: 500px;
+
+        &>h3 {
             text-align: center;
         }
 
-        & > .eventObject {
+        &>.eventObject {
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            height: 100px;
             margin: 5%;
             border: 2px solid var(--border-brown);
             border-radius: 20px;
+
+            &>img {
+                aspect-ratio: 1/1;
+                width: 70px;
+                height: 70px;
+                margin: 20px;
+            }
+
+            &>.textItems {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+
+                &>h4 {
+                    margin: 0%;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                &>p {
+                    margin: 0%;
+                    font-size: 15px;
+                }
+
+            }
         }
     }
 
-    & > .recentActivity {
-        grid-row: 2;
-    }
+     &>.recentActivity {
+            grid-column: 1;
+            grid-row: 2;
+        }
 
-    & > .graphs {
-        grid-column: 2;
-        grid-row:  1 / span 2;
+    &>.graphs {
+       grid-column: 2;
+       grid-row: 1 / span 2;
     }
 }
 
