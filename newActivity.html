@@ -1,91 +1,60 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" media="screen" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    
-    <body>
-        <header>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Profiles</a>
-                <a href="#">About</a>
-            </nav>
-        </header>
 
-        <form>
-            <section class="infoSection">
-                <h2>Information</h2>
+<head>
+    <link rel="stylesheet" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
 
-                <label for="title">Title Your Activity</label>
-                <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Title"
-                    required
-                />
+<body class="newActivityPage">
+    <header>
+        <img src="Images/pawpal-logo-compressed 1.png" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
 
-                <label for="event-date">When Will This Occur?</label>
-                <input type="date" id="event-date" name="event-date" />
+    <form>
+        <section class="infoSection">
+            <h2>Information</h2>
 
-                <label for="myDropdown"
-                    >What category does this event fall under?</label
-                >
-                <select id="myDropdown" name="myDropdown">
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                    <option value="option4">Option 4</option>
-                </select>
+            <label for="title">Title Your Activity</label>
+            <input type="text" id="email" name="email" placeholder="Title" required />
 
-                <label for="title">Title Your Activity</label>
-                <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Title"
-                    required
-                />
+            <label for="event-date">When Will This Occur?</label>
+            <input type="date" id="event-date" name="event-date" />
 
-                <label for="description">Describe what happened:</label>
-                <textarea
-                    id="description"
-                    name="description"
-                    rows="6"
-                    placeholder="Your Message Here..."
-                    required
-                ></textarea>
-            </section>
+            <label for="myDropdown">What category does this event fall under?</label>
+            <select id="myDropdown" name="myDropdown">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
 
-            <section class="reminderSection">
-                <h2>Reminders</h2>
+            <label for="title">Title Your Activity</label>
+            <input type="text" id="email" name="email" placeholder="Title" required />
 
-                <label for="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                />
+            <label for="description">Describe what happened:</label>
+            <textarea id="description" name="description" rows="6" placeholder="Your Message Here..."
+                required></textarea>
+        </section>
 
-                <label for="message">Message</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    placeholder="Your Message"
-                    required
-                ></textarea>
-            </section>
+        <section class="reminderSection">
+            <h2>Reminders</h2>
 
-            <button type="submit">Submit</button>
-        </form>
-    </body>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+        </section>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
 </html>
