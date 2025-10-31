@@ -45,12 +45,13 @@ nav a {
     font-size: 20px;
 
     text-decoration: none;
-    color: var(--common-white);
+    color: var(--common-white);;
 }
 
 nav a:hover {
-    background-color: rgb(73 80 95);
+    text-decoration: underline;
 }
+
 /* specific stuff */
 .main-content {
     display: flex;
