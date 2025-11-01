@@ -226,7 +226,9 @@ li {
         padding-right: 0;
         margin-right: 0;
     }
-
+    .activityHistoryHeader {
+        width: 93vw;
+    }
     nav a {
         margin: 0.5rem 0;
     }
