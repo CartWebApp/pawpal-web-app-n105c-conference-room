@@ -935,3 +935,62 @@ body.singlePetProfilePage {
         }
     }
 }
+@media screen and (max-width: 680px) {
+    header {
+        width: 89vw;
+    }
+    h1 {
+        font-size: 80px !important;
+    }
+
+    .meetOurTeam {
+        text-align: center;
+    }
+
+    .meetOurTeam > h2 {
+        font-size: 50px;
+    }
+
+    .meetOurTeam > p {
+        font-size: 30px;
+        margin: 0% 7%;
+    }
+
+    :is(.ourVision,.ourMission) {
+        background-color: #84A55B;
+        display: grid;
+        grid-template: 1fr/1fr;
+        column-gap: 15px;
+        padding: 5%;
+    }
+
+    :is(.ourVision,.ourMission) > img {
+        width: 90%;
+        order: 3;
+        justify-self: center;
+    }
+
+    :is(.ourVision,.ourMission) > div {
+        color: var(--common-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    :is(.ourVision,.ourMission) > div > h2 {
+        font-weight: 100;
+        font-size: 50px;
+        order: 1;
+        justify-self: center;
+        margin-bottom: 0.5rem;
+    }
+
+    :is(.ourVision,.ourMission) > div > p {
+        font-size: 25px;
+        order: 2;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        justify-self: center;
+    }
+}
