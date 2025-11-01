@@ -221,8 +221,10 @@ li {
 /* mobile styles */
 @media screen and (max-width: 680px) {
     header {
-        width: 94.4vw;
+        width: 95.29526205vw;
         justify-items:center;
+        padding-right: 0;
+        margin-right: 0;
     }
 
     nav a {
@@ -230,9 +232,9 @@ li {
     }
 
     .main-content {
-        width: 98vw;
+        width: 94vw;
         margin-left: 0;
-        padding: 5%;
+        padding: 3%;
         align-items: center;
     }
 
@@ -246,7 +248,7 @@ li {
     li{
         & > .event-line {
             align-self: center;
-            padding-right: 15em;
+            padding-right: 10em;
             font-size: larger;
             & > img {
                 height: 50px;
@@ -256,12 +258,22 @@ li {
                 font-size: medium;
             }
         }
+        & > .desc-line {
+            font-size: medium;
+            & > img {
+                height: 60px;
+                width: 2px;
+            }
+            & > .event-description {
+                font-size: medium;
+            }
+        }
     }
     h2{
         font-size: 1.2rem;
     }
     h1 {
-        margin: 0.5rem 0;
+        margin: 0.5rem 0.5rem;
         font-size: 3.5rem;
     }
 }

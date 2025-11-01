@@ -936,27 +936,32 @@ body.singlePetProfilePage {
     }
 }
 @media screen and (max-width: 680px) {
-    header {
-        width: 89vw;
+    *{
+        padding: 0;
     }
-    h1 {
-        font-size: 80px !important;
+    header {
+        width: 93.1vw;
+        padding-right: 0;
+    }
+
+    .aboutUsHero > h1 {
+        font-size: 80px;
     }
 
     .meetOurTeam {
         text-align: center;
     }
 
-    .meetOurTeam > h2 {
+    .meetOurTeam>h2 {
         font-size: 50px;
     }
 
-    .meetOurTeam > p {
+    .meetOurTeam>p {
         font-size: 30px;
         margin: 0% 7%;
     }
 
-    :is(.ourVision,.ourMission) {
+    :is(.ourVision, .ourMission) {
         background-color: #84A55B;
         display: grid;
         grid-template: 1fr/1fr;
@@ -964,13 +969,13 @@ body.singlePetProfilePage {
         padding: 5%;
     }
 
-    :is(.ourVision,.ourMission) > img {
+    :is(.ourVision, .ourMission)>img {
         width: 90%;
         order: 3;
         justify-self: center;
     }
 
-    :is(.ourVision,.ourMission) > div {
+    :is(.ourVision, .ourMission)>div {
         color: var(--common-white);
         display: flex;
         flex-direction: column;
@@ -978,19 +983,116 @@ body.singlePetProfilePage {
         align-items: center;
     }
 
-    :is(.ourVision,.ourMission) > div > h2 {
+    :is(.ourVision, .ourMission)>div>h2 {
         font-weight: 100;
         font-size: 50px;
         order: 1;
         justify-self: center;
         margin-bottom: 0.5rem;
     }
-
-    :is(.ourVision,.ourMission) > div > p {
+   
+    :is(.ourVision, .ourMission)>div>p {
         font-size: 25px;
         order: 2;
         padding-left: 2rem;
         padding-right: 2rem;
         justify-self: center;
+    }
+
+    .benefits {
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+        text-align: center;
+        background-color: var(--common-green);
+    }
+
+    .benefits>img {
+        width: 96%;
+    }
+
+    .benefits>h2 {
+        font-size: 3.5vw;
+        margin-bottom: 1vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    .benefits>ul {
+        justify-self: center;
+        width: 90%;
+        height: auto;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        text-align: left;
+        font-size: 2.5vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 0;
+        color: var(--common-white);
+        &>li:not(:last-child) {
+            margin-bottom: 1vh;
+        }
+    }
+    .howItWorks {
+        & > h2 {
+            font-size: 70px;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+    .howItWorks .gridSteps {
+        --border-seperation: 3px solid black;
+
+        align-self: stretch;
+        display: grid;
+        grid-template: 1fr 1fr/1fr 1fr;
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 3% 6%;
+    }
+
+    .howItWorks .gridSteps>section {
+        grid-template-rows: auto 50px;
+        &>h3 {
+            font-size: 40px;
+            margin-bottom: 2rem;
+
+        }
+        &>h4 {
+            font-size: 30px;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+    }
+    .ourMotive>img {
+        order: 1;
+        grid-column: 2;
+        margin-bottom: 0rem;
+        align-self: center;
+        border: 1vw solid #526639;
+        border-radius: 1rem;
+        width: 96%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .ourMotive>div {
+        grid-column: 1;
+        font-size: 30px;
+        margin-bottom: 2rem;
+        &>h2 {
+            font-size: 50px;
+        }
+        &>p {
+            font-size: 20px !important;
+        }
+        &>a {
+            font-size: 30px;
+            padding: 2% 15%;
+        }
+    }
+    .contactUs>h2 {
+        font-size: 50px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
     }
 }
