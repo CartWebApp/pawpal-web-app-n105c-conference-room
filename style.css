@@ -10,6 +10,7 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--common-white);
 }
 
 header {
@@ -35,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgb(73 80 95);
+    text-decoration: underline;
 }
 
 /* Home Page */
@@ -51,7 +52,7 @@ nav a:hover {
     flex-direction: column;
 
     aspect-ratio: 16/7;
-    background: url("images/HeroImage.png");
+    background: url("images/HeroImage.webp");
     background-size: cover;
     background-position: center;
 
@@ -155,18 +156,19 @@ nav a:hover {
     padding: 5% 10%;
 
     & > section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: auto 50px;
+        place-items: center;
+
         & > h3 {
             font-weight: 100;
             font-size: 30px;
-            margin-bottom: 1rem;
-            aspect-ratio: 1/1;
-            width: 20%;
-            height: 20%;
+            margin-bottom: 2rem;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
+            line-height: 70px;
+            text-align: center;
 
             background-color: var(--common-white);
             border: 4px solid var(--border-brown);
@@ -175,7 +177,6 @@ nav a:hover {
         & > h4 {
             font-size: 25px;
             font-weight: 500;
-            margin-top: 1rem;
             color: var(--common-white);
         }
     }
@@ -202,73 +203,68 @@ nav a:hover {
 }
 
 .ourMotive {
-     display: grid;
+    display: grid;
     grid-template: auto / 1fr 1fr;
     background-color: var(--common-green);
 
-    & > img {
+    &>img {
         order: 2;
         grid-column: 2;
         width: 100%;
         margin-right: 2rem;
     }
 
-    
-    & > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;   
-        align-items: center;
-        order: 1;
-        grid-column: 1;
+
+    &>div {
         text-indent: 5%;
-        padding: 5%;
-        & > h2 {
-                width: 100%;
-                height: auto;
-                font-size: 30px;
-                font-weight: 400;
-                color: var(--common-white);
-            }
-        
-            &>p:first-of-type {
-                width: 100%;
-                height: auto;
-                font-size: 17.5px;
-                font-weight: 400;
-        
-                color: var(--common-white);
-            }
-        
-            &>p:last-of-type {
-                width: 100%;
-                height: auto;
-                font-size: 17.5px;
-                font-weight: 400;
-        
-                color: var(--common-white);
-            }
-        
-            & > a {
-                margin-right: 50%;
-                padding: 1.5% 7.5%;
+        margin: 2% 5%;
 
+        &>h2 {
+            margin: 3% 0%;
+            text-indent: 0%;
+            width: 100%;
+            height: auto;
+            font-size: 35px;
+            font-weight: 400;
+            color: var(--common-white);
+        }
 
-                text-decoration: none;
-                color: black;
-                font-size: 25px;
-                text-wrap: nowrap;
-                text-indent: 0px;
-                background-color: var(--common-white);
-                border: 3px solid var(--border-brown);
-                color: black;
-                text-decoration: none;
-                border-radius: 20px;
-            }
-                
-            &>a:hover {
-                background-color: rgb(220, 220, 220);
-            }
+        &>p:first-of-type {
+            margin-left: 3%;
+            width: 100%;
+            height: auto;
+            font-size: 17.5px;
+            font-weight: 400;
+
+            color: var(--common-white);
+        }
+
+        &>p:last-of-type {
+            margin-left: 3%;
+            margin-bottom: 20px;
+            width: 100%;
+            height: auto;
+            font-size: 17.5px;
+            font-weight: 400;
+
+            color: var(--common-white);
+        }
+
+        &>a {
+            margin-left: 3%;
+            padding: 1.5% 7.5%;
+
+            font-size: 25px;
+            background-color: var(--common-white);
+            border: 3px solid var(--border-brown);
+            color: black;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        &>a:hover {
+            background-color: rgb(220, 220, 220);
+        }
     }
 }
 
@@ -443,33 +439,396 @@ nav a:hover {
 }
 
 /* Select Profile Page */
+
+body.petProfilesPage {
+    background-color: #80A356;
+}
+
 .cartoonHero {
-    background: url(Images/ourMissionPicture.png) lightgray 50% / cover no-repeat;
-    aspect-ratio: 16/5;
+    background: url(Images/cartoonHero.svg) 50%;
+    width: 100%;
+    height: 285px;
+    
     display: flex;
     align-items: flex-end;
     justify-content: center;
     & > h1 {
+        position: absolute;
+        top: 250px;
+        z-index: 0;
+
         font-size: 50px;
-        font-weight: 400;
+        font-weight: 500;
+        line-height: 0px;
+        color: var(--common-white);
+        background-color: #80A356;
+        padding: 50px;
+        border-radius: 20px;
     }
 }
 
 .cardGrid {
     display: grid;
-    grid-template: 300px / repeat(5,1fr);
-    gap: 15px;
-    grid-auto-rows: auto;
+    grid-template: 300px / repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 300px;
+    row-gap: 20px;
+
+    margin-top: 20px;
+
+    & > * {
+        z-index: 1;
+        margin: 10px;
+        color: black;
+        text-decoration: none;
+    }
 
     & > .brunoCard {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        border: 5px solid var(--border-brown);
+        border-radius: 20px;
         text-align: center;
 
         background-color: var(--common-white);
+
+        & > * {
+            margin: 0%;
+            padding: 0%;
+            line-height: 0; /* To reduce space between image and text */
+        }
+
+        &::before {
+            content: '';
+            background: url(Images/brunoProfile.jpg) center / cover no-repeat;
+            margin-top: 15px;
+
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            width: 80px;
+            border: 4px solid var(--border-brown);
+        }
+
+        & > div > h3 {
+            font-size: 30px;
+        }
+
+        & > div > .breed {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: gray;
+        }
+
+        & > div > p:last-child {
+            line-height: 20px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: '';
+                background: url(Images/upcoming-icon.svg) center / contain no-repeat;
+                aspect-ratio: 1/1;
+                width: 50px;
+                height: auto;
+            }
+        }
+    }
+
+    & > .addNewPet {
+        --outline-color: rgba(255, 255, 255, 0.522);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 20px;
+        border: 5px solid var(--outline-color);
+        color:var(--outline-color);
+        background-color: rgba(255, 255, 255, 0);
+
+        font-size: 30px;
+
+        &::before {
+            content: '+';
+            font-size: 80px;
+            color: rgba(40, 40, 40, 0.797);
+            background-color: var(--outline-color);
+            border-radius: 50%;
+            padding: 0% 22.5px;
+
+            align-self: center;
+            justify-self: center;
+        }
     }
 }
+
+/* Single Pet Profile Page */
+
+body.singlePetProfilePage {
+    background-color: #80A356;
+}
+
+.profileTag {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0% 5%;
+    z-index: 1;
+
+    position: absolute;
+    top: 290px;
+
+    & > div {
+        position: relative;
+        z-index: -1;
+        margin-left: -120px;
+        color: var(--common-white);
+        
+
+        & > h2 {
+            font-size: 35px;
+            font-weight: 500;
+            margin-bottom: 0rem;
+
+            background-color: var(--border-brown);
+            border-radius: 15px;
+            padding: 0% 10px 5% 100px;
+        }
+
+        & > p:first-of-type {
+            position: absolute;
+            text-wrap: nowrap;
+            top: 75px;
+
+            font-size: 25px;
+            margin-top: 0%;
+            margin-bottom: 0rem;
+
+            background-color: var(--border-brown);
+            border-radius: 15px;
+            padding: 1% 10px 1% 100px;
+        }
+
+        & > p:last-of-type {
+            font-size: 25px;
+            color: var(--common-white);
+            padding-left: 100px;
+        }
+    }
+
+    &::before {
+        content: '';
+        background: url(Images/brunoProfile.jpg) center / cover no-repeat;
+        margin-right: 20px;
+
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        width: 150px;
+        border: 10px solid var(--border-brown);
+    }
+}
+
+.dataSection {
+    margin-top: 125px;
+    display: grid;
+    grid-template: auto auto / 1fr 1fr;
+    justify-items: center;
+
+    &>.recentActivity,
+    &>.upcomingEvents {
+        background-color: var(--common-white);
+        border: 2px solid var(--border-brown);
+        border-radius: 20px;
+        padding: 2%;
+        margin: 5%;
+        min-width: 400px;
+        min-height: 550px;
+
+        &>h2 {
+            margin: 5%;
+            font-weight: 400;
+            font-size: 40px;
+            color: var(--border-brown);
+        }
+
+        &>.eventObject {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100px;
+            margin: 5%;
+            border: 2px solid var(--border-brown);
+            border-radius: 20px;
+
+            box-shadow: 0px 2px 5px grey;
+
+            &>img {
+                aspect-ratio: 1/1;
+                width: 70px;
+                height: 70px;
+                margin: 20px;
+            }
+
+            &>.textItems {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+
+                &>h4 {
+                    margin: 0%;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                &>p {
+                    margin: 0%;
+                    font-size: 15px;
+                }
+
+            }
+        }
+    }
+
+    &>.upcomingEvents .links {
+        margin: 10% 5%;
+
+        display: flex;
+        justify-content: space-between;
+
+        & * {
+            text-decoration: none;
+            color: var(--common-white);
+            font-size: 30px;
+
+            background-color: var(--common-green); 
+            border-radius: 10px;
+            border: 2px solid var(--border-brown);
+        }
+
+        & :first-of-type {
+            text-align: left;
+            padding: 1% 7%;
+        }
+
+        & :last-child {
+            padding: 1% 15px;
+        }
+    }
+
+    &>.recentActivity {
+        grid-column: 1;
+        grid-row: 2;
+        &>a {
+            display: flex;
+            justify-content: center;
+            /* That flex is just to center the button */
+
+            margin: 10% 5%;
+            text-decoration: none;
+            color: var(--common-white);
+            font-size: 30px;
+
+            background-color: var(--common-green); 
+            border-radius: 10px;
+            border: 2px solid var(--border-brown);
+
+            padding: 1% 20%;
+        }
+    }
+
+    &>.graphs {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}
+
+/* Adding New Activity */
+
+.newActivityHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    aspect-ratio: 16/4;
+    background: url("images/newActivityHero.jpg");
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+
+    & > h1 {
+        font-size: 65px;
+        font-weight: bold;
+        line-height: 0px;
+        color: var(--common-white);
+        -webkit-text-stroke: 2px var(--border-brown);
+    }
+}
+
+.newActivityPage h2 {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 0px;
+
+    color: var(--common-white);
+    background-color: #80A356;
+    padding: 5% 0%;
+}
+
+.newActivityPage form {
+
+    &>section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0px;
+
+        &> :not(h2) {
+            margin-bottom: 1.5rem;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        &>label {
+            font-size: 15px;
+            margin-bottom: 0.5rem;
+        }
+
+        &>input,
+        select,
+        textarea {
+            padding: 0.5%;
+            font-size: 17.5px;
+            border-radius: 10px;
+            border: 0px;
+        }
+    }
+
+    &>button {
+        margin-bottom: 1.5rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 2rem;
+        padding: 0.5% 7.5%;
+
+        font-size: 20px;
+        background-color: var(--common-green);
+        border: 0px;
+        color: var(--common-white);
+        text-decoration: none;
+        border-radius: 10px;
+    }
+}
+
 
 /* About Us Page */
 
@@ -574,5 +933,166 @@ nav a:hover {
                 font-size: 30px;
             }
         }
+    }
+}
+@media screen and (max-width: 680px) {
+    *{
+        padding: 0;
+    }
+    header {
+        width: 93.1vw;
+        padding-right: 0;
+    }
+
+    .aboutUsHero > h1 {
+        font-size: 80px;
+    }
+
+    .meetOurTeam {
+        text-align: center;
+    }
+
+    .meetOurTeam>h2 {
+        font-size: 50px;
+    }
+
+    .meetOurTeam>p {
+        font-size: 30px;
+        margin: 0% 7%;
+    }
+
+    :is(.ourVision, .ourMission) {
+        background-color: #84A55B;
+        display: grid;
+        grid-template: 1fr/1fr;
+        column-gap: 15px;
+        padding: 5%;
+    }
+
+    :is(.ourVision, .ourMission)>img {
+        width: 90%;
+        order: 3;
+        justify-self: center;
+    }
+
+    :is(.ourVision, .ourMission)>div {
+        color: var(--common-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    :is(.ourVision, .ourMission)>div>h2 {
+        font-weight: 100;
+        font-size: 50px;
+        order: 1;
+        justify-self: center;
+        margin-bottom: 0.5rem;
+    }
+   
+    :is(.ourVision, .ourMission)>div>p {
+        font-size: 25px;
+        order: 2;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        justify-self: center;
+    }
+
+    .benefits {
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+        text-align: center;
+        background-color: var(--common-green);
+    }
+
+    .benefits>img {
+        width: 96%;
+    }
+
+    .benefits>h2 {
+        font-size: 3.5vw;
+        margin-bottom: 1vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    .benefits>ul {
+        justify-self: center;
+        width: 90%;
+        height: auto;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        text-align: left;
+        font-size: 2.5vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 0;
+        color: var(--common-white);
+        &>li:not(:last-child) {
+            margin-bottom: 1vh;
+        }
+    }
+    .howItWorks {
+        & > h2 {
+            font-size: 70px;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+    .howItWorks .gridSteps {
+        --border-seperation: 3px solid black;
+
+        align-self: stretch;
+        display: grid;
+        grid-template: 1fr 1fr/1fr 1fr;
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 3% 6%;
+    }
+
+    .howItWorks .gridSteps>section {
+        grid-template-rows: auto 50px;
+        &>h3 {
+            font-size: 40px;
+            margin-bottom: 2rem;
+
+        }
+        &>h4 {
+            font-size: 30px;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+    }
+    .ourMotive>img {
+        order: 1;
+        grid-column: 2;
+        margin-bottom: 0rem;
+        align-self: center;
+        border: 1vw solid #526639;
+        border-radius: 1rem;
+        width: 96%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .ourMotive>div {
+        grid-column: 1;
+        font-size: 30px;
+        margin-bottom: 2rem;
+        &>h2 {
+            font-size: 50px;
+        }
+        &>p {
+            font-size: 20px !important;
+        }
+        &>a {
+            font-size: 30px;
+            padding: 2% 15%;
+        }
+    }
+    .contactUs>h2 {
+        font-size: 50px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
     }
 }
