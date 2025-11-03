@@ -6,12 +6,9 @@
     <head>
         <link rel="stylesheet" media="screen" href="style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-    
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="mainCopy.js"></script>
     </head>
 
-    <body>
+    <body class="singlePetProfilePage">
         <header>
             <img src="Images/pawpal-logo-compressed 1.png" />
             <nav>
@@ -21,7 +18,6 @@
             </nav>
         </header>
 
-        <body class="singlePetProfilePage">
             <section class="cartoonHero"></section>
 
             <section class="entireProfile">
@@ -89,17 +85,19 @@
                     <aside class="graphs">
                         <section class="graphObject">
                             <h3>Weight (lbs)</h3>
-                            <canvas id="myChart"></canvas>
+                            <canvas id="weightGraph"></canvas>
                             <!--Come back to these; these will require Javascript-->
                         </section>
                 
                         <section class="graphObject">
                             <h3>Walking (Miles)</h3>
+                            <canvas id="walkGraph"></canvas>
                             <!--Come back to these; these will require Javascript-->
                         </section>
                 
                         <section class="graphObject">
                             <h3>Medication (mG)</h3>
+                            <canvas id="medicationGraph"></canvas>
                             <!--Come back to these; these will require Javascript-->
                         </section>
                 
@@ -110,6 +108,9 @@
                     </aside>
                 </div>
             </section>
-        </body>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="mainCopy.js"></script>
+        <!-- GPT Tells me these need to be at the bottom for things to work -->
     </body>
 </html>

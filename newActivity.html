@@ -26,25 +26,26 @@
             <h2>Information</h2>
 
             <label for="title">Title Your Activity</label>
-            <input type="text" id="email" name="email" placeholder="Title" required />
+            <input type="text" id="title" placeholder="Title" required />
 
-            <label for="event-date">When Will This Occur?</label>
-            <input type="date" id="event-date" name="event-date" required/>
+            <label for="date">When Will This Occur?</label>
+            <input type="date" id="date" required/>
 
-            <label for="myDropdown">What category does this event fall under?</label>
-            <select id="myDropdown" name="myDropdown" required>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-                <option value="option4">Option 4</option>
+            <label for="category">What category does this event fall under?</label>
+            <select id="category" name="myDropdown" required>
+                <option value="weight">Weight</option>
+                <option value="walking">Walking</option>
+                <option value="medication">Medication</option>
             </select>
 
-            <label for="measure">How much of this activity occurs?</label>
-            <input type="measure" id="measure" name="measure" placeholder="Amount here" required />
+            <label for="amount">How much of this activity occurs?</label>
+            <input type="number" id="amount" placeholder="Amount here" required />
 
             <label for="description">Describe what happened:</label>
-            <textarea id="description" name="description" rows="6" placeholder="Description" required></textarea>
+            <textarea id="description" rows="6" placeholder="Description" required></textarea>
         </section>
+
+        <form>
 
         <section class="reminderSection">
             <h2>Reminders</h2>
@@ -58,6 +59,10 @@
 
         <button type="submit">Submit</button>
     </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mainCopy.js"></script>
+    <!-- GPT Tells me these need to be at the bottom for things to work -->
 </body>
 
 </html>

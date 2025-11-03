@@ -216,6 +216,10 @@ nav a:hover {
 
 
     &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
         text-indent: 5%;
         margin: 2% 5%;
 
@@ -224,7 +228,7 @@ nav a:hover {
             text-indent: 0%;
             width: 100%;
             height: auto;
-            font-size: 35px;
+            font-size: 3.75vw;
             font-weight: 400;
             color: var(--common-white);
         }
@@ -233,7 +237,7 @@ nav a:hover {
             margin-left: 3%;
             width: 100%;
             height: auto;
-            font-size: 17.5px;
+            font-size: 1.75vw;
             font-weight: 400;
 
             color: var(--common-white);
@@ -244,7 +248,7 @@ nav a:hover {
             margin-bottom: 20px;
             width: 100%;
             height: auto;
-            font-size: 17.5px;
+            font-size: 1.75vw;
             font-weight: 400;
 
             color: var(--common-white);
@@ -254,6 +258,8 @@ nav a:hover {
             margin-left: 3%;
             padding: 1.5% 7.5%;
 
+            text-indent: 0%;
+            text-wrap: nowrap;
             font-size: 25px;
             background-color: var(--common-white);
             border: 3px solid var(--border-brown);
