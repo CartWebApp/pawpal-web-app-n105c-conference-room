@@ -1,146 +1,133 @@
-// dashboard.js
-
-// Example: Load user data from localStorage or use defaults
-const storedData = JSON.parse(localStorage.getItem('petActivity')) || {};
-
-const petData = storedData['Bruno'] || {
-    weight: [40, 42, 43, 41, 44, 45, 46],
-    walking: [1, 2, 1.5, 3, 2.5, 4, 5],
-    medication: [10, 8, 12, 6, 14, 15, 10]
-};
-
-// Labels for the week
-const labels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+// mainCopy.js
 
 document.addEventListener("DOMContentLoaded", () => {
-    // chart creation code here
-    // Function to create bar charts using Chart.js
-    function createBarChart(canvasId, label, data, color) {
-        const ctx = document.getElementById(canvasId);
-        if (!ctx) return;
+  // Detect which page we're on
+  const isNewActivityPage = document.body.classList.contains("newActivityPage");
+  const isProfilePage = document.body.classList.contains("singlePetProfilePage");
 
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: label,
-                    data: data,
-                    backgroundColor: color,
-                    borderRadius: 6
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: { stepSize: 5 }
-                    }
-                },
-                plugins: {
-                    legend: { display: false }
-                }
+  // Load stored data or create empty structure
+  const petName = "Bruno"; // You can make this dynamic later
+  const storedData = JSON.parse(localStorage.getItem("petActivity")) || {};
+  if (!storedData[petName]) {
+    storedData[petName] = {
+      weight: [],
+      walking: [],
+      medication: [],
+      events: []
+    };
+  }
+
+  // ============================================
+  // 🟢 NEW ACTIVITY PAGE LOGIC
+  // ============================================
+  if (isNewActivityPage) {
+    const form = document.querySelector("form");
+
+    form.addEventListener(".submit", (event) => {
+      event.preventDefault();
+
+      // Gather form values
+      const title = document.querySelector("#title").value;
+      const date = document.querySelector("#date").value;
+      const time = document.querySelector("#time").value;
+      const category = document.querySelector("#category").value;
+      const amount = parseFloat(document.querySelector("#amount").value);
+      const description = document.querySelector("#description").value;
+      const reminderDate = document.querySelector("#reminder-date").value;
+      const reminderTime = document.querySelector("#reminder-time").value;
+
+      // Create new activity object
+      const newActivity = {
+        title,
+        date,
+        time,
+        category,
+        amount,
+        description,
+        reminderDate,
+        reminderTime,
+        timestamp: new Date().toISOString()
+      };
+
+      // Add to events list
+      storedData[petName].events.push(newActivity);
+
+      // Add numerical data to graphs
+      if (category === "weight") storedData[petName].weight.push(amount);
+      if (category === "walking") storedData[petName].walking.push(amount);
+      if (category === "medication") storedData[petName].medication.push(amount);
+
+      // Save to localStorage
+      localStorage.setItem("petActivity", JSON.stringify(storedData));
+
+      alert("✅ Activity saved successfully!");
+      window.location.href = "profiles.html"; // Go back to the dashboard page
+    });
+  }
+
+  // ============================================
+  // 🔵 PROFILE PAGE LOGIC (graphs + events)
+  // ============================================
+  if (isProfilePage) {
+    const data = storedData[petName];
+
+    // --------- Chart.js setup ----------
+    function createBarChart(canvasId, label, dataArray, color) {
+      const ctx = document.getElementById(canvasId);
+      if (!ctx) return;
+
+      const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: label,
+            data: dataArray.slice(-7), // show last 7 entries
+            backgroundColor: color,
+            borderRadius: 6,
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
             }
-        });
+          },
+          plugins: {
+            legend: { display: false }
+          }
+        }
+      });
     }
 
+    // Create the three graphs
+    createBarChart("weightGraph", "Weight (lbs)", data.weight, "#789851");
+    createBarChart("walkGraph", "Walking (Miles)", data.walking, "#789851");
+    createBarChart("medicationGraph", "Medication (mg)", data.medication, "#789851");
 
-    // Initialize all graphs
-    document.addEventListener("DOMContentLoaded", () => {
-        createBarChart('weightChart', 'Weight (lbs)', petData.weight, '#86A873');
-        createBarChart('walkingChart', 'Walking (Miles)', petData.walking, '#C2EABD');
-        createBarChart('medicationChart', 'Medication (mg)', petData.medication, '#E08E45');
-    });
-});
+    // --------- Upcoming Events Section ----------
+    const upcomingSection = document.querySelector(".upcomingEvents");
+    if (upcomingSection && data.events.length > 0) {
+      // Clear any static example event
+      const existingObjects = upcomingSection.querySelectorAll(".eventObject");
+      existingObjects.forEach(obj => obj.remove());
 
-// log-activity.js
-function savePetData(petName, category, newValue) {
-    const data = JSON.parse(localStorage.getItem('petActivity')) || {};
-    data[petName] = data[petName] || { weight: [], walking: [], medication: [] };
-
-    data[petName][category].push(newValue);
-    localStorage.setItem('petActivity', JSON.stringify(data));
-}
-
-savePetData('Bruno', 'walking', 4.2);
-
-
-// new-activity.js
-
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form"); // assuming you have one <form> element
-
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        // Get form data
-        const title = document.querySelector("#title").value;
-        const date = document.querySelector("#date").value;
-        const time = document.querySelector("#time").value;
-        const category = document.querySelector("#category").value;
-        const amount = parseFloat(document.querySelector("#amount").value);
-        const description = document.querySelector("#description").value;
-
-        // Load current data or create new object
-        const data = JSON.parse(localStorage.getItem("petActivity")) || {};
-        const petName = "Bruno"; // (You can replace this with dynamic pet selection later)
-
-        // Initialize pet data if missing
-        if (!data[petName]) {
-            data[petName] = {
-                weight: [],
-                walking: [],
-                medication: [],
-                events: []
-            };
-        }
-
-        // Add event to "upcoming events"
-        data[petName].events.push({
-            title,
-            date,
-            time,
-            category,
-            amount,
-            description
-        });
-
-        // Add numerical data to the right chart
-        if (category === "weight") data[petName].weight.push(amount);
-        if (category === "walking") data[petName].walking.push(amount);
-        if (category === "medication") data[petName].medication.push(amount);
-
-        // Save back to localStorage
-        localStorage.setItem("petActivity", JSON.stringify(data));
-
-        alert("Activity saved!");
-        window.location.href = "dashboard.html"; // Go back to dashboard
-    });
-});
-
-// dashboard.js (add this near the bottom)
-
-function displayUpcomingEvents() {
-    const container = document.getElementById("upcomingEvents");
-    const data = JSON.parse(localStorage.getItem("petActivity")) || {};
-    const pet = data["Bruno"];
-    if (!pet || !pet.events) return;
-
-    container.innerHTML = ""; // clear old items
-
-    pet.events.slice(-3).forEach(event => {
+      // Show the 3 most recent upcoming events
+      data.events.slice(-3).forEach(event => {
         const div = document.createElement("div");
-        div.classList.add("event-card");
+        div.classList.add("eventObject");
         div.innerHTML = `
-      <h4>${event.title}</h4>
-      <p>${event.date} at ${event.time}</p>
-      <p>Category: ${event.category}</p>
-    `;
-        container.appendChild(div);
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    displayUpcomingEvents();
+          <img src="images/hospital-icon.png" />
+          <div class="textItems">
+            <h4>${event.title}</h4>
+            <p><time datetime="${event.date}">${event.date}</time></p>
+            <p>${event.description}</p>
+          </div>
+        `;
+        upcomingSection.prepend(div);
+      });
+    }
+  }
 });

@@ -29,7 +29,10 @@
             <input type="text" id="title" placeholder="Title" required />
 
             <label for="date">When Will This Occur?</label>
-            <input type="date" id="date" required/>
+            <input type="date" id="date" required />
+
+            <label for="time">At what time?</label>
+            <input type="time" id="time" required />
 
             <label for="category">What category does this event fall under?</label>
             <select id="category" name="myDropdown" required>
@@ -45,15 +48,13 @@
             <textarea id="description" rows="6" placeholder="Description" required></textarea>
         </section>
 
-        <form>
-
         <section class="reminderSection">
             <h2>Reminders</h2>
 
-           <label for="reminder-date">When do you want to be reminded of this event?</label>
+            <label for="reminder-date">When do you want to be reminded of this event?</label>
             <input type="date" id="reminder-date" name="reminder-date" />
 
-           <label for="reminder-time">At what time?</label>
+            <label for="reminder-time">At what time?</label>
             <input type="time" id="reminder-time" name="reminder-time" />
         </section>
 
@@ -62,7 +63,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="mainCopy.js"></script>
-    <!-- GPT Tells me these need to be at the bottom for things to work -->
+
 </body>
 
 </html>
