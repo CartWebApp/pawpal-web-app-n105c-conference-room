@@ -1109,6 +1109,172 @@ Originally was going to be the CSS for the add new category
         }
     }
 }
+.HistoryStuff .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2% 3.5%;
+    width: fit-content;
+    margin: 0 auto;
+}
+.HistoryStuff .back-button {
+    align-self: flex-start;
+    padding: 0.3% 0.7%;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    background-color: var(--common-green);
+    border: 2px solid var(--border-brown);
+    color: var(--common-white);
+    text-decoration: none;
+    border-radius: 9px;
+}
+.HistoryStuff .filter {
+    padding: 0.3% 0.7%;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    margin-top: 1em;
+    font-size: 1rem;
+    background-color: var(--common-white);
+    border: 2px solid var(--border-brown);
+    color: black;
+    text-decoration: none;
+    border-radius: 9px;
+    & > img {
+        height: 0.8rem;
+        margin-left: 0.3rem;
+        margin-top: 2px;
+    }
+}
+.HistoryStuff .filter-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.HistoryStuff .overlay-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+.HistoryStuff .close-overlay {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.HistoryStuff .close-overlay:hover,
+.close-overlay:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.HistoryStuff #filterForm label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.HistoryStuff #filterForm input[type="radio"] {
+    margin-right: 10px;
+}
+
+.HistoryStuff #filterForm button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.HistoryStuff li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--border-brown);
+    margin-top: 5em;
+    margin-bottom: 1em;
+    & > .event-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 3px solid var(--border-brown);
+        border-radius: 20px;
+        padding: 1rem;
+        padding-right: 30em;
+        & > img {
+            height: 70px;
+            width: 70px;
+            border-radius: 15px;
+            margin-right: 1rem;
+        }
+        & > .event-details {
+            font-size: large;
+            font-weight: 400;
+            margin-left: 1rem;
+            text-align: left;
+        }
+    }
+    & > .desc-line {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 0;
+        padding-right: 12em;
+        & > img {
+            height: 70px;
+            width: 2px;
+            margin-right: 1rem;
+        }
+        & > .event-description {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+    }
+    & > p {
+        font-size: medium;
+    }
+}
+/* Activity and Event History */
+.HistoryStuff .navigation-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    & > a{
+        & > img{
+            height: 50px;
+        }
+    }
+    & > h2{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.HistoryStuff .Contact {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    height: 40px;
+}
 @media screen and (max-width: 680px) {
     *{
         padding: 0;
@@ -1268,5 +1434,90 @@ Originally was going to be the CSS for the add new category
         font-size: 50px;
         margin-bottom: 0.5rem;
         margin-top: 0.5rem;
+    }
+    .dataSection {
+    margin-top: 125px;
+    display: block !important;
+    flex-direction: column;
+    justify-items: center;
+    &>.upcomingEvents{
+        padding: 40px;
+    }
+    &>.recentActivity {
+        padding: 40px;
+    }
+
+    &>.graphs {
+        display: flex;
+        flex-direction: column;
+        &>.graphObject {
+            padding: 90px;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-bottom: 2rem;
+            &>h3 {
+                font-size: 30px;
+            }
+
+        }
+    }
+}
+.HistoryStuff header {
+        width: 95.29526205vw;
+        justify-items:center;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .HistoryStuff .activityHistoryHeader {
+        width: 93vw;
+    }
+    .HistoryStuff nav a {
+        margin: 0.5rem 0;
+    }
+
+    .HistoryStuff .main-content {
+        width: 94vw;
+        margin-left: 0;
+        padding: 3%;
+        align-items: center;
+    }
+
+    .HistoryStuff .back-button {
+        padding: 0.3% 0.7%;
+        font-size: 1.5rem;
+    }
+    .HistoryStuff .filter {
+        font-size: 1.5rem;
+    }
+    .HistoryStuff li{
+        & > .event-line {
+            align-self: center;
+            padding-right: 10em;
+            font-size: larger;
+            & > img {
+                height: 50px;
+                width: 50px;
+            }
+            & > .event-details {
+                font-size: medium;
+            }
+        }
+        & > .desc-line {
+            font-size: medium;
+            & > img {
+                height: 60px;
+                width: 2px;
+            }
+            & > .event-description {
+                font-size: medium;
+            }
+        }
+    }
+    .HistoryStuff h2{
+        font-size: 1.2rem;
+    }
+    .HistoryStuff h1 {
+        margin: 0.5rem 0.5rem;
+        font-size: 3.5rem;
     }
 }

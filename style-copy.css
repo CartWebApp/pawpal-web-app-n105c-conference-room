@@ -53,7 +53,7 @@ nav a:hover {
 }
 
 /* specific stuff */
-.main-content {
+.HistoryStuff .main-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +64,7 @@ nav a:hover {
     width: fit-content;
     margin: 0 auto;
 }
-.back-button {
+.HistoryStuff .back-button {
     align-self: flex-start;
     padding: 0.3% 0.7%;
     margin-bottom: 1em;
@@ -75,7 +75,7 @@ nav a:hover {
     text-decoration: none;
     border-radius: 9px;
 }
-.filter {
+.HistoryStuff .filter {
     padding: 0.3% 0.7%;
     display: flex;
     align-self: flex-start;
@@ -93,7 +93,7 @@ nav a:hover {
         margin-top: 2px;
     }
 }
-.filter-overlay {
+.HistoryStuff .filter-overlay {
     display: none;
     position: fixed;
     z-index: 1;
@@ -103,7 +103,7 @@ nav a:hover {
     height: 100%;
     background-color: rgba(0,0,0,0.4);
 }
-.overlay-content {
+.HistoryStuff .overlay-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -112,7 +112,7 @@ nav a:hover {
     max-width: 500px;
     border-radius: 5px;
 }
-.close-overlay {
+.HistoryStuff .close-overlay {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -120,28 +120,28 @@ nav a:hover {
     cursor: pointer;
 }
 
-.close-overlay:hover,
+.HistoryStuff .close-overlay:hover,
 .close-overlay:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
-#filterForm label {
+.HistoryStuff #filterForm label {
     display: block;
     margin: 10px 0;
     cursor: pointer;
 }
 
-#filterForm input[type="radio"] {
+.HistoryStuff #filterForm input[type="radio"] {
     margin-right: 10px;
 }
 
-#filterForm button {
+.HistoryStuff #filterForm button {
     margin-top: 20px;
     padding: 10px 15px;
     cursor: pointer;
 }
-li {
+.HistoryStuff li {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -194,7 +194,7 @@ li {
         font-size: medium;
     }
 }
-.navigation-buttons {
+.HistoryStuff .navigation-buttons {
     display: flex;
     gap: 5px;
     justify-content: center;
@@ -212,7 +212,7 @@ li {
     }
 }
 
-.Contact {
+.HistoryStuff .Contact {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -220,34 +220,34 @@ li {
 }
 /* mobile styles */
 @media screen and (max-width: 680px) {
-    header {
+    .HistoryStuff header {
         width: 95.29526205vw;
         justify-items:center;
         padding-right: 0;
         margin-right: 0;
     }
-    .activityHistoryHeader {
+    .HistoryStuff .activityHistoryHeader {
         width: 93vw;
     }
-    nav a {
+    .HistoryStuff nav a {
         margin: 0.5rem 0;
     }
 
-    .main-content {
+    .HistoryStuff .main-content {
         width: 94vw;
         margin-left: 0;
         padding: 3%;
         align-items: center;
     }
 
-    .back-button {
+    .HistoryStuff .back-button {
         padding: 0.3% 0.7%;
         font-size: 1.5rem;
     }
-    .filter {
+    .HistoryStuff .filter {
         font-size: 1.5rem;
     }
-    li{
+    .HistoryStuff li{
         & > .event-line {
             align-self: center;
             padding-right: 10em;
@@ -271,10 +271,10 @@ li {
             }
         }
     }
-    h2{
+    .HistoryStuff h2{
         font-size: 1.2rem;
     }
-    h1 {
+    .HistoryStuff h1 {
         margin: 0.5rem 0.5rem;
         font-size: 3.5rem;
     }
