@@ -6,14 +6,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Modal controls (example: open/close handlers)
     const modal = document.getElementById('newPetOverlay');
-    const openModalBtn = document.getElementById('addNewPet');
-    const closeModalBtn = document.getElementById('closeModalBtn');
+    const openModalBtn = document.getElementsById('addNewPet');
+    const closeModalBtn = document.getElementById('exitOverlay');
     if (openModalBtn && modal) openModalBtn.onclick = () => modal.style.display = 'block';
     if (closeModalBtn && modal) closeModalBtn.onclick = () => modal.style.display = 'none';
 
     const form = document.getElementById('newPetForm');
     const imgInput = document.getElementById('petImageInput');
-    const imgDrop = document.getElementById('petImageDrop');
+    const imgDrop = document.getElementById('petImageInput');
     let imageBase64 = '';
 
     // Drag-and-drop support for image
