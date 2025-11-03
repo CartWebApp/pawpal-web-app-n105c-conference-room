@@ -1,58 +1,93 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" media="screen" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
 
-    <body class="petProfilesPage">
-        <header>
-            <img src="Images/pawpal-logo-compressed 1.png" />
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="profiles.html">Profiles</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+<head>
+    <link rel="stylesheet" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
 
-        <body>
-            <section class="cartoonHero">
-                <h1>Pet Profiles</h1>
-            </section>
+<body class="petProfilesPage">
+    <header>
+        <img src="Images/pawpal-logo-compressed 1.png" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
 
-            <!--Do grid here-->
-            <section class="cardGrid">
-                <a href="singlePetProfile.html" class="brunoCard">
-                    <div class="cardInfo">
-                        <h3>Bruno</h3>
-                        <p class="Breed">Golden Retriever</p>
+    <section class="cartoonHero">
+        <h1>Pet Profiles</h1>
+    </section>
 
-                        <!--Before psuedo-element to add the calendar image-->
-                        <p>1</p>
-                    </div>
-                </a>
+    <!--Do grid here-->
+    <section class="cardGrid">
+        <a href="singlePetProfile.html" class="brunoCard">
+            <div class="cardInfo">
+                <h3>Bruno</h3>
+                <p class="Breed">Golden Retriever</p>
 
-                <button type="button" class="addNewPet">
-                    <!--background image for plus-->
-                    <p>Add a pet</p>
-                </button>
-                <button type="button" class="addNewPet">
-                    <!--background image for plus-->
-                    <p>Add a pet</p>
-                </button>
-                <button type="button" class="addNewPet">
-                    <!--background image for plus-->
-                    <p>Add a pet</p>
-                </button>
-                <button type="button" class="addNewPet">
-                    <!--background image for plus-->
-                    <p>Add a pet</p>
-                </button>
-            </section>
-        </body>
-    </body>
+                <!--Before psuedo-element to add the calendar image-->
+                <p>1</p>
+            </div>
+        </a>
+
+        <button type="button" class="addNewPet">
+            <!--background image for plus-->
+            <p>Add a pet</p>
+        </button>
+        <button type="button" class="addNewPet">
+            <!--background image for plus-->
+            <p>Add a pet</p>
+        </button>
+        <button type="button" class="addNewPet">
+            <!--background image for plus-->
+            <p>Add a pet</p>
+        </button>
+        <button type="button" class="addNewPet">
+            <!--background image for plus-->
+            <p>Add a pet</p>
+        </button>
+    </section>
+
+    <div class="newPetOverlay">
+        <form class="newPetForm">
+            <h2>New Pet</h2>
+            <img src="Images/InsertImage.png" id="insertImage">
+
+            <button type="button">
+                <img src="Images/X - out.png" id="exitOverlay">
+            </button>
+
+            <div class="inputs">
+                <div class="inputSet">
+                    <label for="name">Name of pet:</label>
+                    <input type="text" id="name"required />
+                </div>
+
+                <div class="inputSet">
+                    <label for="breed">Breed:</label>
+                    <input type="text" id="breed" required />
+                </div>
+
+                <div class="inputSet">
+                    <label for="weight">Current Weight:</label>
+                    <input type="text" id="categoryName" required />
+                </div>
+
+                <div class="inputSet">
+                    <label for="birthDate">Date of Birth:</label>
+                    <input type="number" id="birthDate" required />
+                </div>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mainCopy.js"></script>
+</body>
+
 </html>

@@ -1,118 +1,146 @@
-
-
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" media="screen" href="style.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-    </head>
 
-    <body class="singlePetProfilePage">
-        <header>
-            <img src="Images/pawpal-logo-compressed 1.png" />
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="profiles.html">Profiles</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+<head>
+    <link rel="stylesheet" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
 
-            <section class="cartoonHero"></section>
+<body class="singlePetProfilePage">
+    <header>
+        <img src="Images/pawpal-logo-compressed 1.png" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
 
-            <section class="entireProfile">
-                <section class="profileTag">
-                    <div class="text">
-                        <h2>Bruno</h2>
-                        <p>Golden Retriever</p>
-                        <p>7 years old</p>
+    <section class="cartoonHero"></section>
+
+    <section class="entireProfile">
+        <section class="profileTag">
+            <div class="text">
+                <h2>Bruno</h2>
+                <p>Golden Retriever</p>
+                <p>7 years old</p>
+            </div>
+        </section>
+
+        <div class="dataSection">
+            <section class="upcomingEvents">
+                <h2>Upcoming Events</h2>
+                <div class="eventObject">
+                    <img src="images/hospital-icon.png" />
+                    <div class="textItems">
+                        <h4>Vet Checkup with Dr. Smith</h4>
+                        <p>
+                            <time datetime="2025-10-15T15:00:00">Oct 15th, 3:00 PM</time>
+                        </p>
+                        <p>Yearly check up at vet office</p>
                     </div>
-                </section>
-
-                <div class="dataSection">
-                    <section class="upcomingEvents">
-                        <h2>Upcoming Events</h2>
-                        <div class="eventObject">
-                            <img src="images/hospital-icon.png"/>
-                            <div class="textItems">
-                                <h4>Vet Checkup with Dr. Smith</h4>
-                                <p>
-                                    <time datetime="2025-10-15T15:00:00">Oct 15th, 3:00 PM</time>
-                                </p>
-                                <p>Yearly check up at vet office</p>
-                            </div>
-                        </div>
-                        <div class="links">
-                            <a href="upcomingHistory.html">See all reminders</a>
-                            <a href="newActivity.html">+</a>
-                        </div>
-                    </section>
-                
-                    <section class="recentActivity">
-                        <h2>Recent Activity</h2>
-                        <div class="eventObject">
-                            <img src="images/Feeding-icon.png"/>
-                            <div class="textItems">
-                                <h4>Feeding</h4>
-                                <p>
-                                    <time datetime="2025-10-14T21:00:00">Oct 14th, 9:00 PM</time>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="eventObject">
-                            <img src="images/medication-icon.png"/>
-                            <div class="textItems">
-                                <h4>Medication</h4>
-                                <p>
-                                    <time datetime="2025-10-14T21:00:00">Oct 14th, 9:00 PM</time>
-                                </p>
-                                <p>Fed 1 pill</p>
-                            </div>
-                        </div>
-                        <div class="eventObject">
-                            <img src="images/walk-icon.png"/>
-                            <div class="textItems">
-                                <h4>2 mile run</h4>
-                                <p>
-                                    <time datetime="2025-10-14T21:00:00">Oct 14th, 9:00 PM</time>
-                                </p>
-                                <p>Weekly run</p>
-                            </div>
-                        </div>
-                        <a href="activityHistory.html">See all events</a>
-                    </section>
-                
-                    <aside class="graphs">
-                        <section class="graphObject">
-                            <h3>Weight (lbs)</h3>
-                            <canvas id="weightGraph"></canvas>
-                            <!--Come back to these; these will require Javascript-->
-                        </section>
-                
-                        <section class="graphObject">
-                            <h3>Walking (Miles)</h3>
-                            <canvas id="walkGraph"></canvas>
-                            <!--Come back to these; these will require Javascript-->
-                        </section>
-                
-                        <section class="graphObject">
-                            <h3>Medication (mG)</h3>
-                            <canvas id="medicationGraph"></canvas>
-                            <!--Come back to these; these will require Javascript-->
-                        </section>
-                
-                        <button type="button" class="addNewGraph">
-                            <!--background image for plus-->
-                            <p>Track New Data</p>
-                        </button>
-                    </aside>
+                </div>
+                <div class="links">
+                    <a href="upcomingHistory.html">See all reminders</a>
+                    <a href="newActivity.html">+</a>
                 </div>
             </section>
 
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script src="mainCopy.js"></script>
+            <section class="recentActivity">
+                <h2>Recent Activity</h2>
+                <div class="eventObject">
+                    <img src="images/Feeding-icon.png" />
+                    <div class="textItems">
+                        <h4>Feeding</h4>
+                        <p>
+                            <time datetime="2025-10-14T21:00:00">Oct 14th, 9:00 PM</time>
+                        </p>
+                    </div>
+                </div>
+                <div class="eventObject">
+                    <img src="images/medication-icon.png" />
+                    <div class="textItems">
+                        <h4>Medication</h4>
+                        <p>
+                            <time datetime="2025-10-14T21:00:00">Oct 14th, 9:00 PM</time>
+                        </p>
+                        <p>Fed 1 pill</p>
+                    </div>
+                </div>
+                <div class="eventObject">
+                    <img src="images/walk-icon.png" />
+                    <div class="textItems">
+                        <h4>2 mile run</h4>
+                        <p>
+                            <time datetime="2025-10-14T21:00:00">Oct 14th, 9:00 PM</time>
+                        </p>
+                        <p>Weekly run</p>
+                    </div>
+                </div>
+                <a href="activityHistory.html">See all events</a>
+            </section>
 
-    </body>
+            <aside class="graphs">
+                <section class="graphObject">
+                    <h3>Weight (lbs)</h3>
+                    <canvas id="weightGraph"></canvas>
+                    <!--Come back to these; these will require Javascript-->
+                </section>
+
+                <section class="graphObject">
+                    <h3>Walking (Miles)</h3>
+                    <canvas id="walkGraph"></canvas>
+                    <!--Come back to these; these will require Javascript-->
+                </section>
+
+                <section class="graphObject">
+                    <h3>Medication (mG)</h3>
+                    <canvas id="medicationGraph"></canvas>
+                    <!--Come back to these; these will require Javascript-->
+                </section>
+
+                <!--
+
+                
+                <button type="button" class="addNewGraph">
+                    background image for plus
+                    <p>Track New Data</p>
+                </button>
+                -->
+            </aside>
+        </div>
+
+    <!--
+        This was originally going to be the overlay for adding a new graph/category to track data.
+        I never got around to finishing it. I didn't have the time or Javascript knowledge. So I decided to leave it out.
+
+    <div class="newGraphOverlay">
+            <form>
+                <h2>New Graph</h2>
+                <label for="title">Title of Graph:</label>
+                <input type="text" id="title" required />
+
+                <label for="categoryMonitors">What will this graph monitor?</label>
+                <input type="text" id="categoryMonitors" required />
+
+                <label for="categoryName">What is the name of this category?</label>
+                <input type="text" id="categoryName" required />
+
+                <label for="startingValue">Starting Value:</label>
+                <input type="number" id="startingValue" required />
+
+                <label for="units">Units:</label>
+                <input type="text" id="units" required />
+
+               <button type="submit">Submit</button>
+            </form>
+        </div> -->
+
+    </section> 
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mainCopy.js"></script>
+</body>
+
 </html>
-
-

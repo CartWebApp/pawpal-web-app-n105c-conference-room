@@ -1,5 +1,125 @@
 // mainCopy.js
 
+// Adding a new profile //
+// Pet Profiles - Vanilla JS, localStorage
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Modal controls (example: open/close handlers)
+    const modal = document.getElementById('newPetOverlay');
+    const openModalBtn = document.getElementById('addNewPet');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    if (openModalBtn && modal) openModalBtn.onclick = () => modal.style.display = 'block';
+    if (closeModalBtn && modal) closeModalBtn.onclick = () => modal.style.display = 'none';
+
+    const form = document.getElementById('newPetForm');
+    const imgInput = document.getElementById('petImageInput');
+    const imgDrop = document.getElementById('petImageDrop');
+    let imageBase64 = '';
+
+    // Drag-and-drop support for image
+    if(imgDrop) {
+        imgDrop.ondragover = (e) => { e.preventDefault(); imgDrop.classList.add('dragover'); };
+        imgDrop.ondragleave = (e) => { e.preventDefault(); imgDrop.classList.remove('dragover'); };
+        imgDrop.ondrop = (e) => {
+            e.preventDefault();
+            imgDrop.classList.remove('dragover');
+            let file = e.dataTransfer.files[0];
+            handleImageFile(file);
+        };
+    }
+
+    // Fallback to input[type='file']
+    if(imgInput) {
+        imgInput.onchange = (e) => {
+            let file = e.target.files[0];
+            handleImageFile(file);
+        };
+    }
+
+    function handleImageFile(file) {
+        if (!file || !file.type.startsWith('image/')) {
+            alert('Please upload an image file.');
+            return;
+        }
+        let reader = new FileReader();
+        reader.onload = function(evt) {
+            imageBase64 = evt.target.result;
+            if(imgDrop) imgDrop.style.backgroundImage = `url('${imageBase64}')`;
+        };
+        reader.readAsDataURL(file);
+    }
+
+    if(form) {
+        form.onsubmit = function(e) {
+            e.preventDefault();
+            // Collect and validate fields
+            const name = form.elements['petName'].value.trim();
+            const breed = form.elements['petBreed'].value.trim();
+            const weight = form.elements['petWeight'].value.trim();
+            const dob = form.elements['petDOB'].value.trim();
+            if (!name || !breed || !weight || !dob) {
+                alert('Please fill out all fields.');
+                return;
+            }
+            const pet = {
+                id: Date.now(),
+                name,
+                breed,
+                weight: parseFloat(weight),
+                dob,
+                image: imageBase64
+            };
+            savePetProfile(pet);
+            // Optionally close modal and reset form
+            if(modal) modal.style.display = 'none';
+            form.reset();
+            imageBase64 = '';
+            if(imgDrop) imgDrop.style.backgroundImage = '';
+            renderPetProfiles();
+        };
+    }
+
+    // Storage utilities
+    function getPetProfiles() {
+        return JSON.parse(localStorage.getItem('petProfiles') || '[]');
+    }
+    function savePetProfile(pet) {
+        const pets = getPetProfiles();
+        pets.push(pet);
+        localStorage.setItem('petProfiles', JSON.stringify(pets));
+    }
+
+    // Simple example rendering: add your own DOM logic
+    function renderPetProfiles() {
+        const pets = getPetProfiles();
+        const container = document.getElementById('petProfilesContainer');
+        if(!container) return;
+        container.innerHTML = '';
+        pets.forEach(pet => {
+            const div = document.createElement('div');
+            div.className = 'pet-profile';
+            div.innerHTML = `
+                <div class="pet-thumb" style="width:64px;height:64px;background-image:url('${pet.image || ''}');background-size:cover;"></div>
+                <div><strong>${pet.name}</strong></div>
+                <div>${pet.breed}</div>
+                <div>${pet.weight} lbs</div>
+                <div>${pet.dob}</div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    // Initial render
+    renderPetProfiles();
+});
+
+
+
+
+
+
+/* Logging activites */
+
 document.addEventListener("DOMContentLoaded", () => {
   // Detect which page we're on
   const isNewActivityPage = document.body.classList.contains("newActivityPage");

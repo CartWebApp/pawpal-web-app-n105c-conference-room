@@ -450,6 +450,65 @@ body.petProfilesPage {
     background-color: #80A356;
 }
 
+.newPetOverlay {
+    position: fixed;
+
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.715);
+    border-radius: 5px;
+
+    &>form {
+        background-color: var(--common-white);
+        border: 3px solid var(--border-brown);
+        border-radius: 15px;
+
+        height: 60%;
+
+        margin: 16%;
+        padding: 20px;
+
+        &>.inputs {
+            display: flex;
+
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+
+            &>h2 {
+                line-height: 10px;
+                font-size: 40px;
+                font-weight: 400;
+            }
+
+            &>input {
+                width: 40%;
+                height: 20%;
+                border: 1px solid black;
+                border-radius: 5px;
+                background-color: #D9D9D9;
+            }
+
+            &>button {
+                margin-bottom: 0.5rem;
+                margin-right: 5%;
+                margin-top: 2rem;
+                padding: 0.75% 10%;
+
+                font-size: 20px;
+                background-color: var(--common-green);
+                border: 0px;
+                color: var(--common-white);
+                text-decoration: none;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
 .cartoonHero {
     background: url(Images/cartoonHero.svg) 50%;
     width: 100%;
@@ -578,6 +637,65 @@ body.singlePetProfilePage {
     background-color: #80A356;
 }
 
+/* 
+Originally was going to be the CSS for the add new category
+.newGraphOverlay {
+    display: none;
+    position: fixed;
+
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.715);
+    border-radius: 5px;
+
+    & > form {
+        display: flex;
+        background-color: var(--common-white);
+        border: 3px solid var(--border-brown);
+        border-radius: 15px;
+
+        height: 60%;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 16%;
+        padding: 20px;
+
+        & > h2 {
+            line-height: 10px;
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        & > input {
+            width: 30%;
+            height: 4%;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: #D9D9D9;
+        }
+
+        & > button {
+            margin-bottom: 0.5rem;
+            margin-right: 5%;
+            margin-top: 2rem;
+            padding: 0.75% 10%;
+
+            font-size: 20px;
+            background-color: var(--common-green);
+            border: 0px;
+            color: var(--common-white);
+            text-decoration: none;
+            border-radius: 10px;
+        }
+    }
+}
+*/
+
 .profileTag {
     display: flex;
     justify-content: flex-start;
@@ -640,7 +758,7 @@ body.singlePetProfilePage {
 .dataSection {
     margin-top: 125px;
     display: grid;
-    grid-template: auto auto / 1fr 1fr;
+    grid-template: 1fr 1fr / 1fr 1fr;
     justify-items: center;
 
     &>.recentActivity,
@@ -713,7 +831,7 @@ body.singlePetProfilePage {
             color: var(--common-white);
             font-size: 30px;
 
-            background-color: var(--common-green); 
+            background-color: var(--common-green);
             border-radius: 10px;
             border: 2px solid var(--border-brown);
         }
@@ -731,6 +849,7 @@ body.singlePetProfilePage {
     &>.recentActivity {
         grid-column: 1;
         grid-row: 2;
+
         &>a {
             display: flex;
             justify-content: center;
@@ -741,7 +860,7 @@ body.singlePetProfilePage {
             color: var(--common-white);
             font-size: 30px;
 
-            background-color: var(--common-green); 
+            background-color: var(--common-green);
             border-radius: 10px;
             border: 2px solid var(--border-brown);
 
@@ -751,7 +870,52 @@ body.singlePetProfilePage {
 
     &>.graphs {
         grid-column: 2;
-        grid-row: 1 / span 2;
+        grid-row: span 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &>.graphObject {
+            padding: 20px;
+
+            background-color: var(--common-white);
+            border-radius: 20px;
+            border: 4px solid var(--border-brown);
+
+            &>h3 {
+                color: var(--border-brown);
+                font-weight: 300;
+                font-size: 20px;
+            }
+
+        }
+
+        &>.addNewGraph {
+            padding: 2rem 4rem;
+
+            --outline-color: rgba(255, 255, 255, 0.522);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            border: 5px solid var(--outline-color);
+            color: var(--outline-color);
+            background-color: rgba(255, 255, 255, 0);
+
+            font-size: 30px;
+
+            &::before {
+                content: '+';
+                font-size: 80px;
+                color: rgba(40, 40, 40, 0.797);
+                background-color: var(--outline-color);
+                border-radius: 50%;
+                padding: 0% 22.5px;
+            }
+        }
     }
 }
 
