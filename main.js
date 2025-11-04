@@ -1,5 +1,6 @@
 // Select key elements
 const contactBtn = document.querySelector('.contactButton');
+const contactBtnInferior = document.querySelector('.contactButtonInferior')
 const overlay = document.querySelector('.contactOverlay');
 const modalContainer = document.querySelector('.insideContainer');
 const form = overlay.querySelector('form');
@@ -7,6 +8,9 @@ const form = overlay.querySelector('form');
 // Show modal when button is clicked
 contactBtn.addEventListener('click', () => {
   overlay.style.display = 'block';
+});
+contactBtnInferior.addEventListener('click', () => {
+    overlay.style.display = 'block';
 });
 
 // Hide modal when clicking outside modal container
