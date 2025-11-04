@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>PawPal - Pet Wellness Tracker</title>
-        <link rel="stylesheet" media="screen" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
 
-    <body class="mainPage">
-        <header>
-            <img src="Images/pawpal-logo-compressed 1.png" />
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="profiles.html">Profiles</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+<head>
+    <title>PawPal - Pet Wellness Tracker</title>
+    <link rel="stylesheet" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
 
-        <section class="mainPageHero">
-            <h1>Keeping Your Pet's Health In Check</h1>
-            <p>
-                Our services enable pet owners to monitor their pet's health
-                with streamlined tracking
-            </p>
-            <a href="signIn.html">Sign In</a>
-        </section>
+<body class="mainPage">
+    <header>
+        <img src="Images/pawpal-logo-compressed 1.png" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profiles.html">Profiles</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
 
-        <section class="benefits">
-            <img src="Images/benefitsPicture.png">
-            <h2>An application for dedicated pet owners</h2>
-            <ul>
-                <li>
-                    Simple log in and sign up: only username, email, and
-                    password required
-                </li>
-                <li>Streamlined reminder and event monitoring</li>
-                <li>Set your own pet statistics to track</li>
-            </ul>
-        </section>
+    <section class="mainPageHero">
+        <h1>Keeping Your Pet's Health In Check</h1>
+        <p>
+            Our services enable pet owners to monitor their pet's health
+            with streamlined tracking
+        </p>
+        <a href="signIn.html">Sign In</a>
+    </section>
 
-        <section class="howItWorks">
-            <h2>How It Works</h2>
-            <div class="gridSteps">
-                <section class="step">
-                    <h3>1</h3>
-                    <h4>Log in to or create an account</h4>
-                    <p></p>
-                </section>
-                <section class="step">
-                    <h3>2</h3>
-                    <h4>Add a new pet</h4>
-                    <p></p>
-                </section>
-                <section class="step">
-                    <h3>3</h3>
-                    <h4>Record data for your pet</h4>
-                    <p></p>
-                </section>
-                <section class="step">
-                    <h3>4</h3>
-                    <h4>Continually update data and add alerts</h4>
-                    <p></p>
-                </section>
-            </div>
-        </section>
+    <section class="benefits">
+        <img src="Images/benefitsPicture.png">
+        <h2>An application for dedicated pet owners</h2>
+        <ul>
+            <li>
+                Simple log in and sign up: only username, email, and
+                password required
+            </li>
+            <li>Streamlined reminder and event monitoring</li>
+            <li>Set your own pet statistics to track</li>
+        </ul>
+    </section>
 
-        <article class="ourMotive">
-            <img src="Images/ourMotivePicture.png">
-            <div class="textContent">
+    <section class="howItWorks">
+        <h2>How It Works</h2>
+        <div class="gridSteps">
+            <section class="step">
+                <h3>1</h3>
+                <h4>Log in to or create an account</h4>
+                <p></p>
+            </section>
+            <section class="step">
+                <h3>2</h3>
+                <h4>Add a new pet</h4>
+                <p></p>
+            </section>
+            <section class="step">
+                <h3>3</h3>
+                <h4>Record data for your pet</h4>
+                <p></p>
+            </section>
+            <section class="step">
+                <h3>4</h3>
+                <h4>Continually update data and add alerts</h4>
+                <p></p>
+            </section>
+        </div>
+    </section>
+
+    <article class="ourMotive">
+        <img src="Images/ourMotivePicture.png">
+        <div class="textContent">
             <h2>Our Motive</h2>
             <p>
                 PawPal is a smart, easy-to-use platform designed to simplify pet
@@ -83,23 +81,39 @@
                 design to keep pets healthier and owners more connected.
             </p>
             <a href="about.html">About Us</a>
-            </div>
-        </article>
+        </div>
+    </article>
 
-        <section class="contactUs">
-            <h2>Have Questions?</h2>
-            <a>Contact Us</a>
-            <p>Keep up with the latest PawPal announcements:</p>
-            <form>
-                <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="email address"
-                    required
-                />
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-    </body>
+    <section class="contactUs">
+        <h2>Have Questions?</h2>
+        <button type="button" class="contactButton">Contact Us</button>
+        <p>Keep up with the latest PawPal announcements:</p>
+        <form>
+            <input type="text" id="email" name="email" placeholder="email address" required />
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+         <button type="button" class="contactButton">
+            <img class="contactImg" src="Images/open-contact-us.png" alt="Contact Us" />
+         </button>
+
+        <div class="contactOverlay">
+            <div class="insideContainer">
+                <h2>Contact Us</h2>
+                <p>Have questions about PawPal? Submit the form below:</p>
+                <form>
+                    <input type="text" id="name" placeholder="Name" required />
+                    <input type="text" id="email" placeholder="Email address" required />
+                    <textarea id="message" rows="6" placeholder="Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
 </html>

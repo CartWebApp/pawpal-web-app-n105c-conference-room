@@ -86,8 +86,26 @@
         </form>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="mainCopy.js"></script>
+    <footer>
+        <button type="button" class="contactButton">
+            <img class="contactImg" src="Images\open-contact-us.png" alt="Contact Us" />
+        </button>
+
+        <div class="contactOverlay">
+            <div class="insideContainer">
+                <h2>Contact Us</h2>
+                <p>Have questions about PawPal? Submit the form below:</p>
+                <form>
+                    <input type="text" id="name" placeholder="Name" required />
+                    <input type="text" id="email" placeholder="Email address" required />
+                    <textarea id="message" rows="6" placeholder="Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

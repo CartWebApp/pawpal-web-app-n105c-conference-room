@@ -44,6 +44,67 @@ button {
     cursor: pointer;
 }
 
+footer .contactButton {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: transparent;
+    border: 0px;
+}
+
+.contactOverlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.653);
+
+    &>.insideContainer {
+        background-color: #80A356;
+        margin: 20% auto;
+        padding: 30px;
+        width: 80%;
+        color: var(--common-white);
+        border-radius: 20px;
+
+        &>h2{
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        &>p{
+            font-size: 20px;
+        }
+        
+        &>form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &>*{
+                margin-bottom: 20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 2%;
+                font-size: 15px;
+
+                background-color: var(--common-white);
+            }
+
+            &>button{
+                width: 30%;
+                border: 0px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
 /* Home Page */
 
 .mainPage>*:not(header) {
@@ -290,7 +351,7 @@ button {
         margin-bottom: 2rem;
     }
 
-    &>a {
+    &>button {
         padding: 1.5% 5%;
         font-size: 20px;
         background-color: var(--common-white);
@@ -302,7 +363,7 @@ button {
         margin-bottom: 50px;
     }
 
-    &>a:hover {
+    &>button:hover {
         background-color: rgb(220, 220, 220);
     }
 
@@ -747,6 +808,8 @@ body.singlePetProfilePage {
             margin: 5%;
             border: 2px solid var(--border-brown);
             border-radius: 20px;
+            padding: 1em;
+            padding-left: 0px;
 
             box-shadow: 0px 2px 5px grey;
 
@@ -761,10 +824,6 @@ body.singlePetProfilePage {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
 
                 &>h4 {
                     margin: 0%;
@@ -788,7 +847,7 @@ body.singlePetProfilePage {
 
     &>.upcomingEvents .links {
         margin: 10% 5%;
-        margin-top: 70%;
+        margin-top: 90%;
 
         display: grid;
         column-gap: 3px;
@@ -1199,8 +1258,11 @@ body.singlePetProfilePage {
     justify-content: space-between;
     align-items: center;
     color: var(--border-brown);
-    margin-top: 5em;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
+
+    &:first-of-type {
+        margin-top: 5em;
+    }
 
     &>.event-line {
         box-sizing: border-box;
@@ -1240,7 +1302,6 @@ body.singlePetProfilePage {
 
     &>.desc-line {
         margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
         align-self: flex-start;
         padding-left: 70px;
 
@@ -1303,14 +1364,6 @@ body.singlePetProfilePage {
         margin-right: 1rem;
     }
 }
-
-.HistoryStuff .Contact {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    height: 40px;
-}
-
 
 @media screen and (max-width: 760px) {
 
