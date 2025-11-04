@@ -32,16 +32,21 @@ nav a {
     font-size: 20px;
 
     text-decoration: none;
-    color: var(--common-white);;
+    color: var(--common-white);
+    ;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* Home Page */
 
-.mainPage > *:not(header) {
+.mainPage>*:not(header) {
     border-bottom: #42522D 8px solid;
 }
 
@@ -59,20 +64,20 @@ nav a:hover {
     text-align: center;
     padding: 7.5%;
 
-    & > h1 {
+    &>h1 {
         font-size: 65px;
         font-weight: bold;
         color: var(--common-white);
         -webkit-text-stroke: 2px var(--border-brown);
     }
 
-    & > p {
+    &>p {
         font-size: 35px;
         color: var(--common-white);
         -webkit-text-stroke: 1px var(--border-brown);
     }
 
-    & > a {
+    &>a {
         margin-top: 1rem;
         padding: 2% 10%;
         font-size: 25px;
@@ -83,7 +88,7 @@ nav a:hover {
         border-radius: 50px;
     }
 
-    & > a:hover {
+    &>a:hover {
         background-color: rgb(220, 220, 220);
     }
 }
@@ -94,27 +99,27 @@ nav a:hover {
     text-align: center;
     background-color: var(--common-green);
 
-    & > img {
+    &>img {
         grid-row: span 2;
         width: 100%;
         margin-right: 2rem;
     }
 
-    & > h2 {
+    &>h2 {
         width: 100%;
         height: auto;
         grid-column-start: 2;
         grid-row-start: 1;
         font-size: 3vw;
         font-weight: 400;
-        
+
         margin-bottom: 2vw;
         margin-left: 1vw;
         margin-right: 1vw;
         color: var(--common-white);
     }
 
-    & > ul {
+    &>ul {
         width: 100%;
         height: auto;
         grid-column-start: 2;
@@ -125,7 +130,8 @@ nav a:hover {
         margin-left: 1vw;
         margin-right: 1vw;
         color: var(--common-white);
-        & > li:not(:last-child) {
+
+        &>li:not(:last-child) {
             margin-bottom: 5vh;
         }
     }
@@ -138,7 +144,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
 
-    & > h2 {
+    &>h2 {
         font-size: 60px;
         font-weight: 400;
         color: var(--common-white);
@@ -155,12 +161,12 @@ nav a:hover {
     flex-wrap: wrap;
     padding: 5% 10%;
 
-    & > section {
+    &>section {
         display: grid;
         grid-template-rows: auto 50px;
         place-items: center;
 
-        & > h3 {
+        &>h3 {
             font-weight: 100;
             font-size: 30px;
             margin-bottom: 2rem;
@@ -172,31 +178,32 @@ nav a:hover {
 
             background-color: var(--common-white);
             border: 4px solid var(--border-brown);
-         
+
         }
-        & > h4 {
+
+        &>h4 {
             font-size: 25px;
             font-weight: 500;
             color: var(--common-white);
         }
     }
 
-    & > section:first-child {
+    &>section:first-child {
         border-bottom: var(--border-seperation);
         border-right: var(--border-seperation);
     }
 
-    & > section:nth-child(2) {
+    &>section:nth-child(2) {
         border-bottom: var(--border-seperation);
         border-left: var(--border-seperation);
     }
 
-    & > section:nth-child(3) {
+    &>section:nth-child(3) {
         border-top: var(--border-seperation);
         border-right: var(--border-seperation);
     }
 
-    & > section:last-child {
+    &>section:last-child {
         border-top: var(--border-seperation);
         border-left: var(--border-seperation);
     }
@@ -233,7 +240,7 @@ nav a:hover {
             color: var(--common-white);
         }
 
-        &>p{
+        &>p {
             margin-left: 3%;
             width: 100%;
             height: auto;
@@ -275,7 +282,7 @@ nav a:hover {
     justify-content: center;
     padding: 5% 10%;
 
-    & > h2 {
+    &>h2 {
         text-align: center;
         font-size: 40px;
         font-weight: 400;
@@ -283,7 +290,7 @@ nav a:hover {
         margin-bottom: 2rem;
     }
 
-    & > a {
+    &>a {
         padding: 1.5% 5%;
         font-size: 20px;
         background-color: var(--common-white);
@@ -295,28 +302,28 @@ nav a:hover {
         margin-bottom: 50px;
     }
 
-    & > a:hover {
+    &>a:hover {
         background-color: rgb(220, 220, 220);
     }
 
-    & > p {
+    &>p {
         font-size: 20px;
         color: var(--common-white);
         text-align: center;
     }
 
-    & > form {
+    &>form {
         display: flex;
         justify-content: center;
 
-        & > input { 
+        &>input {
             font-size: 18px;
             padding: 3px;
             padding-right: 10vw;
             border: 0px
         }
 
-        & > button {
+        &>button {
             padding: 0% 5%;
             background-color: #84A55B;
             border: 0px;
@@ -326,20 +333,20 @@ nav a:hover {
 
 /* Sign in Page */
 
-.signInPage > div {
+.signInPage>div {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 
-    & > h1 {
+    &>h1 {
         font-weight: 400;
         font-size: 40px;
         margin-bottom: 3rem;
     }
 
-    & > section > a {
+    &>section>a {
         color: black;
         font-size: 20px;
 
@@ -349,20 +356,21 @@ nav a:hover {
         }
     }
 
-    & > section > form {
+    &>section>form {
         border-radius: 20px;
         background-color: #84A55B;
-        justify-self: center; /* This looks redundant but for some reason it fixes the padding causing it to be offset*/
+        justify-self: center;
+        /* This looks redundant but for some reason it fixes the padding causing it to be offset*/
         padding: 7.5%;
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
-        
+
         width: 300px;
         margin-bottom: 20px;
 
-        & > input {
+        &>input {
             padding: 3%;
             border: 0px;
             border-radius: 15px;
@@ -371,7 +379,7 @@ nav a:hover {
             font-size: 17.5px;
         }
 
-        & > button:first-of-type {
+        &>button:first-of-type {
             border: 1px solid black;
             border-radius: 10px;
             padding: 4%;
@@ -383,7 +391,7 @@ nav a:hover {
             }
         }
 
-        & > button:last-of-type {
+        &>button:last-of-type {
             border: 0px;
             border-radius: 20px;
             padding: 4%;
@@ -401,13 +409,13 @@ nav a:hover {
     flex-direction: column;
     text-align: center;
 
-    & > h1 {
+    &>h1 {
         font-weight: 400;
         font-size: 40px;
         margin-bottom: 3rem;
     }
 
-    & > section > a {
+    &>section>a {
         color: black;
         font-size: 20px;
 
@@ -417,20 +425,21 @@ nav a:hover {
         }
     }
 
-    & > section > form {
+    &>section>form {
         border-radius: 20px;
         background-color: #84A55B;
-        justify-self: center; /* This looks redundant but for some reason it fixes the padding causing it to be offset*/
+        justify-self: center;
+        /* This looks redundant but for some reason it fixes the padding causing it to be offset*/
         padding: 7.5%;
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
-        
+
         width: 300px;
         margin-bottom: 20px;
 
-        & > input {
+        &>input {
             padding: 3%;
             border: 0px;
             border-radius: 15px;
@@ -439,7 +448,7 @@ nav a:hover {
             font-size: 17.5px;
         }
 
-        & > button {
+        &>button {
             border: 0px;
             border-radius: 20px;
             padding: 4%;
@@ -491,6 +500,7 @@ body.petProfilesPage {
 
             &>div {
                 grid-column: span 2;
+
                 &>input {
                     width: 80%;
                     height: 40%;
@@ -521,11 +531,12 @@ body.petProfilesPage {
     background: url(Images/cartoonHero.svg) 50%;
     width: 100%;
     height: 285px;
-    
+
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    & > h1 {
+
+    &>h1 {
         position: absolute;
         top: 250px;
         z-index: 0;
@@ -548,14 +559,14 @@ body.petProfilesPage {
 
     margin-top: 20px;
 
-    & > * {
+    &>* {
         z-index: 1;
         margin: 10px;
         color: black;
         text-decoration: none;
     }
 
-    & > .brunoCard {
+    &>.brunoCard {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -566,10 +577,11 @@ body.petProfilesPage {
 
         background-color: var(--common-white);
 
-        & > * {
+        &>* {
             margin: 0%;
             padding: 0%;
-            line-height: 0; /* To reduce space between image and text */
+            line-height: 0;
+            /* To reduce space between image and text */
         }
 
         &::before {
@@ -583,18 +595,18 @@ body.petProfilesPage {
             border: 4px solid var(--border-brown);
         }
 
-        & > div > h3 {
+        &>div>h3 {
             font-size: 30px;
         }
 
-        & > div > .breed {
+        &>div>.breed {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 5px;
             color: gray;
         }
 
-        & > div > p:last-child {
+        &>div>p:last-child {
             line-height: 20px;
             font-size: 20px;
             display: flex;
@@ -612,7 +624,7 @@ body.petProfilesPage {
         }
     }
 
-    & > .addNewPet {
+    &>.addNewPet {
         --outline-color: rgba(255, 255, 255, 0.522);
         display: flex;
         align-items: center;
@@ -620,7 +632,7 @@ body.petProfilesPage {
         flex-direction: column;
         border-radius: 20px;
         border: 5px solid var(--outline-color);
-        color:var(--outline-color);
+        color: var(--outline-color);
         background-color: rgba(255, 255, 255, 0);
 
         font-size: 30px;
@@ -654,14 +666,14 @@ body.singlePetProfilePage {
     position: absolute;
     top: 290px;
 
-    & > div {
+    &>div {
         position: relative;
         z-index: -1;
         margin-left: -120px;
         color: var(--common-white);
-        
 
-        & > h2 {
+
+        &>h2 {
             font-size: 35px;
             font-weight: 500;
             margin-bottom: 0rem;
@@ -671,7 +683,7 @@ body.singlePetProfilePage {
             padding: 0% 10px 5% 100px;
         }
 
-        & > p:first-of-type {
+        &>p:first-of-type {
             position: absolute;
             text-wrap: nowrap;
             top: 75px;
@@ -685,7 +697,7 @@ body.singlePetProfilePage {
             padding: 1% 10px 1% 100px;
         }
 
-        & > p:last-of-type {
+        &>p:last-of-type {
             font-size: 25px;
             color: var(--common-white);
             padding-left: 100px;
@@ -901,7 +913,7 @@ body.singlePetProfilePage {
 
     text-align: center;
 
-    & > h1 {
+    &>h1 {
         font-size: 65px;
         font-weight: bold;
         line-height: 0px;
@@ -969,7 +981,7 @@ body.singlePetProfilePage {
 
 /* About Us Page */
 
-.aboutUsPage > *:not(header) {
+.aboutUsPage>*:not(header) {
     border-bottom: #42522D 8px solid;
 }
 
@@ -987,7 +999,7 @@ body.singlePetProfilePage {
     text-align: center;
     padding: 7.5%;
 
-    & > h1 {
+    &>h1 {
         font-size: 65px;
         font-weight: bold;
         color: var(--common-white);
@@ -1002,18 +1014,19 @@ body.singlePetProfilePage {
     column-gap: 15px;
     padding: 5%;
 
-    & > img {
+    &>img {
         order: 1;
         width: 90%;
     }
 
-    & > div {
+    &>div {
         color: var(--common-white);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        & > h2 {
+
+        &>h2 {
             font-weight: 100;
             font-size: 40px;
         }
@@ -1027,17 +1040,18 @@ body.singlePetProfilePage {
     column-gap: 15px;
     padding: 5%;
 
-    & > img {
+    &>img {
         width: 90%;
     }
 
-    & > div {
+    &>div {
         color: var(--common-white);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        & > h2 {
+
+        &>h2 {
             font-weight: 100;
             font-size: 40px;
         }
@@ -1047,71 +1061,84 @@ body.singlePetProfilePage {
 .meetOurTeam {
     text-align: center;
 
-    & > h2 {
+    &>h2 {
         font-size: 40px;
         font-weight: 200;
     }
 
-    & > p {
+    &>p {
         font-size: 20px;
         margin: 0% 10%;
     }
 
-    & > .profileGrid {
+    &>.profileGrid {
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         margin: 5% 5%;
 
-        & > .profile {
+        &>.profile {
             padding: 3%;
-            & > p {
+
+            &>p {
                 font-size: 30px;
             }
         }
     }
 }
+
+/* Activity and Event History */
+
 .HistoryStuff .main-content {
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    text-align: center;
     padding: 2% 3.5%;
-    width: fit-content;
     margin: 0 auto;
+
+    & > h1 {
+        font-weight: 400;
+        font-size: 40px;
+        align-self: flex-start;
+    }
 }
+
 .HistoryStuff .back-button {
     align-self: flex-start;
-    padding: 0.3% 0.7%;
-    margin-bottom: 1em;
-    font-size: 1rem;
+    padding: 1% 3%;
+    font-size: 20px;
+    margin-bottom: 50px;
     background-color: var(--common-green);
     border: 2px solid var(--border-brown);
     color: var(--common-white);
     text-decoration: none;
     border-radius: 9px;
 }
+
 .HistoryStuff .filter {
-    padding: 0.3% 0.7%;
+    padding: 1% 2%;
     display: flex;
     align-self: flex-start;
     align-items: center;
     margin-top: 1em;
-    font-size: 1rem;
+    font-size: 20px;
     background-color: var(--common-white);
     border: 2px solid var(--border-brown);
     color: black;
     text-decoration: none;
     border-radius: 9px;
-    & > img {
+
+    &>img {
         height: 0.8rem;
-        margin-left: 0.3rem;
+
+        margin-left: 1rem;
         margin-top: 2px;
     }
 }
+
 .HistoryStuff .filter-overlay {
     display: none;
     position: fixed;
@@ -1120,8 +1147,9 @@ body.singlePetProfilePage {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
 .HistoryStuff .overlay-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -1131,6 +1159,7 @@ body.singlePetProfilePage {
     max-width: 500px;
     border-radius: 5px;
 }
+
 .HistoryStuff .close-overlay {
     color: #aaa;
     float: right;
@@ -1145,6 +1174,7 @@ body.singlePetProfilePage {
     text-decoration: none;
     cursor: pointer;
 }
+
 .HistoryStuff #filterForm label {
     display: block;
     margin: 10px 0;
@@ -1160,7 +1190,9 @@ body.singlePetProfilePage {
     padding: 10px 15px;
     cursor: pointer;
 }
+
 .HistoryStuff li {
+    box-sizing: border-box;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -1169,64 +1201,104 @@ body.singlePetProfilePage {
     color: var(--border-brown);
     margin-top: 5em;
     margin-bottom: 1em;
-    & > .event-line {
+
+    &>.event-line {
+        box-sizing: border-box;
         display: flex;
         flex-direction: row;
         align-items: center;
         border: 3px solid var(--border-brown);
         border-radius: 20px;
         padding: 1rem;
-        padding-right: 30em;
-        & > img {
+        width: 90vw;
+
+        &>img {
             height: 70px;
             width: 70px;
             border-radius: 15px;
             margin-right: 1rem;
         }
-        & > .event-details {
+
+        &>.event-details {
             font-size: large;
             font-weight: 400;
-            margin-left: 1rem;
+            margin-left: 10px;
             text-align: left;
+            & > h2 {
+                font-weight: 500;
+                font-size: 32.5px;
+                line-height: 20px;
+            }
+
+            & > p {
+                font-size: 20px;
+                line-height: 10px;
+                color: #535353;
+            }
         }
     }
-    & > .desc-line {
+
+    &>.desc-line {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+        align-self: flex-start;
+        padding-left: 70px;
+
+
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-left: 0;
-        padding-right: 12em;
-        & > img {
+
+
+        &>img {
             height: 70px;
             width: 2px;
             margin-right: 1rem;
         }
-        & > .event-description {
+
+        &>.event-description {
             display: flex;
             flex-direction: column;
-            text-align: left;
+            justify-content: center;
+            border-left: 3px solid var(--border-brown);
+            padding-left: 30px;
+
+            & > h2 {
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 10px;
+            }
+
+            & > p {
+                font-size: 20px;
+                line-height: 10px;
+                color: #535353;
+            }
         }
     }
-    & > p {
+
+    &>p {
         font-size: medium;
     }
 }
-/* Activity and Event History */
+
 .HistoryStuff .navigation-buttons {
     display: flex;
     gap: 5px;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    & > a{
-        & > img{
+
+    &>a {
+        &>img {
             height: 50px;
         }
     }
-    & > h2{
+
+    &>h2 {
         font-size: 1.5rem;
+        font-weight: 400;
         margin-left: 1rem;
         margin-right: 1rem;
     }
@@ -1241,16 +1313,18 @@ body.singlePetProfilePage {
 
 
 @media screen and (max-width: 760px) {
+
     /* About Us Page */
-    *{
+    * {
         padding: 0;
     }
+
     header {
         width: 93.1vw;
         padding-right: 0;
     }
 
-    .aboutUsHero > h1 {
+    .aboutUsHero>h1 {
         font-size: 80px;
     }
 
@@ -1296,7 +1370,7 @@ body.singlePetProfilePage {
         justify-self: center;
         margin-bottom: 0.5rem;
     }
-   
+
     :is(.ourVision, .ourMission)>div>p {
         font-size: 25px;
         order: 2;
@@ -1307,110 +1381,111 @@ body.singlePetProfilePage {
 
 
     /* Home Page */
-.benefits {
-    display: flex;
-    flex-direction: column;
+    .benefits {
+        display: flex;
+        flex-direction: column;
 
-    background-color: var(--common-green);
+        background-color: var(--common-green);
 
-    & > img {
-        width: 100%;
-        order: 1
+        &>img {
+            width: 100%;
+            order: 1
+        }
+
+        &>h2 {
+            font-size: 45px;
+        }
+
+        &>ul>li {
+            justify-self: center;
+            font-size: 22.5px;
+            margin-bottom: 20px;
+            width: 90%;
+        }
+
+        &>ul>li:not(:last-child) {
+            margin-bottom: 5vh;
+        }
     }
-
-    & > h2 {
-        font-size: 45px;
-    }
-
-    & > ul > li {
-        justify-self: center;
-        font-size: 22.5px;
-        margin-bottom: 20px;
-        width: 90%;
-    }
-
-    & > ul > li:not(:last-child) {
-        margin-bottom: 5vh;
-    }
-}
 
     .howItWorks {
-        & > h2 {
+        &>h2 {
             font-size: 70px;
             margin-bottom: 0.5rem;
             margin-top: 0.5rem;
         }
     }
+
     .howItWorks .gridSteps {
         --border-seperation: 2px solid black;
 
         display: flex;
         flex-direction: column;
 
-    & > section > h3 {
-        font-size: 40px;
-        margin-bottom: 2rem;
+        &>section>h3 {
+            font-size: 40px;
+            margin-bottom: 2rem;
+        }
+
+        & section>h4 {
+            font-size: 30px;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+        &>section:first-child {
+            border-bottom: var(--border-seperation);
+            border-right: 0px;
+            border-left: 0px;
+        }
+
+        &>section:nth-child(2) {
+            border-bottom: var(--border-seperation);
+            border-top: var(--border-seperation);
+            border-right: 0px;
+            border-left: 0px;
+        }
+
+        &>section:nth-child(3) {
+            border-bottom: var(--border-seperation);
+            border-top: var(--border-seperation);
+            border-right: 0px;
+            border-left: 0px;
+        }
+
+        &>section:last-child {
+            border-top: var(--border-seperation);
+            border-right: 0px;
+            border-left: 0px;
+        }
     }
 
-    & section >h4 {
-        font-size: 30px;
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
+    .ourMotive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-    & > section:first-child {
-        border-bottom: var(--border-seperation);
-        border-right: 0px;
-        border-left: 0px;
-     }
+        &>div {
+            margin-bottom: 2rem;
 
-    & > section:nth-child(2) {
-        border-bottom: var(--border-seperation);
-        border-top: var(--border-seperation);
-        border-right: 0px;
-        border-left: 0px;
-    }
+            &>h2 {
+                font-size: 50px;
+                text-align: center;
+            }
 
-    & > section:nth-child(3) {
-        border-bottom: var(--border-seperation);
-        border-top: var(--border-seperation);
-        border-right: 0px;
-        border-left: 0px;
-    }
+            &>p {
+                text-indent: 0;
+                font-size: 20px;
+            }
 
-    & > section:last-child {
-        border-top: var(--border-seperation);
-        border-right: 0px;
-        border-left: 0px;
-    }
-    }
-
-        .ourMotive {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-    
-            &>div {
-                margin-bottom: 2rem;
-    
-                &>h2 {
-                    font-size: 50px;
-                    text-align: center;
-                }
-    
-                &>p {
-                    text-indent: 0;
-                    font-size: 20px;
-                }
-    
-                &>a {
-                    text-align: center;
-                    align-self: center;
-                    font-size: 30px;
-                    padding: 2% 15%;
-                }
+            &>a {
+                text-align: center;
+                align-self: center;
+                font-size: 30px;
+                padding: 2% 15%;
             }
         }
+    }
 
     .contactUs>h2 {
         font-size: 50px;
@@ -1421,82 +1496,83 @@ body.singlePetProfilePage {
 
     /* Single Pet Profile */
 
-        .dataSection {
-            margin-top: 125px;
-            display: block;
+    .dataSection {
+        margin-top: 125px;
+        display: block;
+        flex-direction: column;
+        justify-items: center;
+
+        &>.upcomingEvents,
+        &>.recentActivity {
+            min-width: 400px;
+        }
+
+        &>.graphs {
+            display: flex;
             flex-direction: column;
-            justify-items: center;
-    
-            &>.upcomingEvents, &>.recentActivity {
-                min-width: 400px;
-            }
-    
-            &>.graphs {
-                display: flex;
-                flex-direction: column;
-    
-                &>.graphObject {
-                    padding-top: 20px;
-                    padding-bottom: 125px;
-                    margin-bottom: 2rem;
-                    width: 88.5%;
-                    height: 300px;
-    
-                    &>h3 {
-                        font-size: 30px;
-                    }
-    
+
+            &>.graphObject {
+                padding-top: 20px;
+                padding-bottom: 125px;
+                margin-bottom: 2rem;
+                width: 88.5%;
+                height: 300px;
+
+                &>h3 {
+                    font-size: 30px;
                 }
+
             }
-}
+        }
+    }
 
     .HistoryStuff .activityHistoryHeader {
         width: 93vw;
     }
 
-    .HistoryStuff .main-content {
-        width: 94vw;
-        margin-left: 0;
-        padding: 3%;
-        align-items: center;
-    }
 
-    .HistoryStuff .back-button {
-        padding: 0.3% 0.7%;
-        font-size: 1.5rem;
-    }
-    .HistoryStuff .filter {
-        font-size: 1.5rem;
-    }
-    .HistoryStuff li{
-        & > .event-line {
+    .HistoryStuff li {
+        &>.event-line {
             align-self: center;
             padding-right: 10em;
-            font-size: larger;
-            & > img {
-                height: 50px;
-                width: 50px;
+            &>img {
+                height: 100%;
+                width: auto;
             }
-            & > .event-details {
-                font-size: medium;
+
+            &>.event-details h2 {
+                line-height: 40px;
+            }
+
+            &>.event-details p {
+                line-height: 25px;
             }
         }
-        & > .desc-line {
+
+        &>.desc-line {
             font-size: medium;
-            & > img {
+
+            &>img {
                 height: 60px;
                 width: 2px;
             }
-            & > .event-description {
+
+            &>.event-description {
                 font-size: medium;
+
+                &>p {
+                    line-height: 25px;
+                }
             }
         }
     }
-    .HistoryStuff h2{
-        font-size: 1.2rem;
+
+    .HistoryStuff h2 {
+        font-size: 3.5rem;
     }
+
     .HistoryStuff h1 {
-        margin: 0.5rem 0.5rem;
         font-size: 3.5rem;
     }
 }
+
